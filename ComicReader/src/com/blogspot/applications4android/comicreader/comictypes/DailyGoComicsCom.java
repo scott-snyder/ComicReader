@@ -143,26 +143,28 @@ public class DailyGoComicsCom extends DailyComic {
         String final_date = null;
         while((line = reader.readLine()) != null) {
 
-            if (line.contains("class=\"strip\"")) {
+            if (line.contains("data-image")) {
                 final_str = line;
             }
 
-            if (line.contains("<title>")) {
+            if (line.contains("data-title=")) {
                 final_title = line;
             }
 
-            if (line.contains("defaultDate")) {
+            if (line.contains("data-date=")) {
                 final_date = line;
             }
         }
-        final Matcher strMatcher = Pattern.compile("src=\"([^\"]*)\"").matcher(final_str);
+        final Matcher strMatcher = Pattern.compile("data-image=\"([^\"]*)\"").matcher(final_str);
         if(strMatcher.find()) final_str = strMatcher.group(1);
 
-    	final_title = final_title.replaceAll(".*<title> ","");
+    	final_title = final_title.replaceAll("data-title=","");
+    	final_title = final_title.replaceAll("\"","");
         final_title = final_title.replaceAll(" Comic Strip.*","");
         final_title = final_title.replaceAll("&amp;","&");
 
-        final_date = final_date.replaceAll(".*defaultDate: \"","");
+        final_date = final_date.replaceAll("data-date=","");
+    	final_date = final_date.replaceAll("\"","");
         final_date = final_date.replaceAll("\".*","");
         final_title=final_title+": "+final_date;
 
