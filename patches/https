@@ -1,0 +1,17 @@
+Bottom: ba491bd85ff37ebb123cba5d6124ba8f5bfc642a
+Top:    ba491bd85ff37ebb123cba5d6124ba8f5bfc642a
+Author: scott snyder <sss@karma>
+Date:   2018-08-26 20:26:38 -0400
+
+Switch from using HttpClient to HttpsURLConnection for image download.
+
+Switch from using HttpClient to HttpsURLConnection for downloading the
+strip image.  Needed for SNI to work properly, which is now required
+by gocomics.
+
+
+
+
+---
+
+
