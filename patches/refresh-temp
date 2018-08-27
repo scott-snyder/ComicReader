@@ -1,0 +1,19 @@
+Bottom: eda31a66ddedd2a43e0777dc14ae04091459609c
+Top:    ba491bd85ff37ebb123cba5d6124ba8f5bfc642a
+Author: scott snyder <sss@karma>
+Date:   2018-08-26 20:24:59 -0400
+
+Refresh of target
+
+---
+
+diff --git a/ComicReader/project.properties b/ComicReader/project.properties
+index ea89160..92b1625 100755
+--- a/ComicReader/project.properties
++++ b/ComicReader/project.properties
+@@ -8,4 +8,4 @@
+ # project structure.
+ 
+ # Project target.
+-target=android-8
++target=android-20
