@@ -1,0 +1,38 @@
+Bottom: ba491bd85ff37ebb123cba5d6124ba8f5bfc642a
+Top:    a4a498bbd24a70b82ff6ee52da46aa57704c0301
+Author: scott snyder <sss@karma>
+Date:   2018-08-26 20:26:47 -0400
+
+Refresh of https
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
+index 9340dbb..d4003c5 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
+@@ -18,6 +18,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
+ 
+ import com.blogspot.applications4android.comicreader.exceptions.ComicSDCardFull;
+ 
++import java.net.URL;
++import java.net.URLConnection;
++import javax.net.ssl.HttpsURLConnection;
++
+ 
+ /**
+  * Class containing utility functions for downloading the URI's
+@@ -84,10 +88,9 @@ public class Downloader {
+ 	 * @throws ClientProtocolException 
+ 	 */
+ 	public static BufferedInputStream openConnectionStream(URI uri) throws URISyntaxException, ClientProtocolException, IOException {
+-		HttpGet http = new HttpGet(uri);
+-		HttpClient client = new DefaultHttpClient();
+-		HttpResponse resp = (HttpResponse) client.execute(http);
+-		InputStream is = resp.getEntity().getContent();
++                URL url = uri.toURL();
++                URLConnection con = url.openConnection();
++                InputStream is = con.getInputStream();
+ 		BufferedInputStream bis = new BufferedInputStream(is);
+ 		return bis;
+ 	}
