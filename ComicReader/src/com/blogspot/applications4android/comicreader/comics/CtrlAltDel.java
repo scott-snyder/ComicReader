@@ -135,9 +135,9 @@ public class CtrlAltDel extends DailyComic {
                 i += 5;
               }
               else {
-                i = url.lastIndexOf ("cad-");
+                i = url.lastIndexOf ("Strip");
                 if (i >= 0) {
-                  i += 4;
+                  i += 5;
                 }
                 else {
                   return null;
@@ -355,15 +355,18 @@ public class CtrlAltDel extends DailyComic {
 
         protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
         {
+            Log.d ("zzz", "getUrlsForMonth1 " + month);
             getMonths();
             TreeMap<Integer, CADStrip> l = mMonths.get (month);
             try {
               if (l == null) {
                 if (mMonths.containsKey (month)) {
+                  Log.d ("zzz", "getUrlsForMonth2");
                   l = new TreeMap<Integer, CADStrip>();
                   URI uri = new URI("https://cad-comic.com/wp-admin/admin-ajax.php");
                   String data = "action=custom_cat_search&post_cat=all&post_month="+month;
                   String sdata = Downloader.downloadToString(uri, data);
+                  Log.d ("zzz", "getUrlsForMonth3 " + sdata);
                   JSONObject root = new JSONObject(sdata);
                   JSONArray posts = root.getJSONArray("posts");
                   List<String> ret = new ArrayList<String>();
@@ -372,6 +375,7 @@ public class CtrlAltDel extends DailyComic {
                     String url = o.getString("comic");
                     if (url.lastIndexOf("KDM") >= 0) continue;
                     Calendar c = getTimeFromUrl (url);
+                    Log.d ("zzz", "getUrlsForMonth4 " + url + " " + c);
                     if (!month.equals (monthKey (c))) {
                       Log.d("zzz", "getUrlsForMonth MISMATCH " + month + " "
                             + monthKey (c) + " " + c);
