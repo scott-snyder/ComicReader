@@ -1,10 +1,11 @@
 Version: 1
-Previous: d0e3c41ed819b5c384a2ab1fae42974e29bc27dc
-Head: 30f6a4ab8ef29eff3a4ef500f6b9a67ca7e88089
+Previous: e64be3611593caf5cc6cae9949e5d9db8780ffb3
+Head: 2b3f9810a211e547c7b075caf9da31e236d76f38
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
   https: 18c36b6dbdbcf1e54f95d91042ffa499b6d06a94
   ctrl-alt-del: 76b299977087e724dbb8406c08b46f4d7d1a00d7
   panties: 30f6a4ab8ef29eff3a4ef500f6b9a67ca7e88089
+  cyanide: 2b3f9810a211e547c7b075caf9da31e236d76f38
 Unapplied:
 Hidden:
