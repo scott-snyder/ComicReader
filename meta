@@ -1,10 +1,11 @@
 Version: 1
-Previous: 726523c0ff5a83b8c312ddaf5f9e72d413712fa0
-Head: bd028f7cac4422e31953b9a26e4537d8dc3f362f
+Previous: c95ae1a09ed63a6b1d54e0a8255cfe361c9dfb32
+Head: 4d533df2b6d92ad9e6bf5f8b8f1b0c93fc1ed891
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
   https: 18c36b6dbdbcf1e54f95d91042ffa499b6d06a94
   ctrl-alt-del: 76b299977087e724dbb8406c08b46f4d7d1a00d7
   panties: bd028f7cac4422e31953b9a26e4537d8dc3f362f
+  refresh-temp: 4d533df2b6d92ad9e6bf5f8b8f1b0c93fc1ed891
 Unapplied:
 Hidden:
