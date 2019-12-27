@@ -82,7 +82,7 @@ public class Cyanide extends RandomIndexedComic {
 			throw e;
 		}
 		final_str = final_str.replaceAll(".*comics%2F","");
-		final_str = final_str.replaceAll("%2F.*","");
+		final_str = final_str.replaceAll("\".*","");
 		Log.d(Cyanide, "In parseForLatestId, final_str = "+final_str);
 		return Integer.parseInt(final_str);
 	}
