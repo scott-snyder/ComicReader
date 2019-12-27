@@ -1,5 +1,5 @@
 Bottom: 98b3f8e055c2750ee73401bfd9602d798fd331a6
-Top:    98b3f8e055c2750ee73401bfd9602d798fd331a6
+Top:    fbee8536221bbc6aee1f783f9347a54cf0e429a5
 Author: scott snyder <sss@karma>
 Date:   2019-12-27 00:17:48 -0500
 
@@ -9,4 +9,16 @@ fix for cyanide
 
 ---
 
-
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
+index 2a8ed6f..4916950 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
+@@ -82,7 +82,7 @@ public class Cyanide extends RandomIndexedComic {
+ 			throw e;
+ 		}
+ 		final_str = final_str.replaceAll(".*comics%2F","");
+-		final_str = final_str.replaceAll("%2F.*","");
++		final_str = final_str.replaceAll("\".*","");
+ 		Log.d(Cyanide, "In parseForLatestId, final_str = "+final_str);
+ 		return Integer.parseInt(final_str);
+ 	}
