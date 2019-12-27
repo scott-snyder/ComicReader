@@ -1,9 +1,10 @@
 Version: 1
-Previous: 0789465aa15ca4314be2edbfcc62e8c5b08cea84
-Head: e12f1f0eb5c313449a07d2ecea98bea55aa46b73
+Previous: 8dc91f688da15c6d87edfa9f2c0b9ab02a40c03a
+Head: 0ad2cb72dabd5bbb4f759c7df7544d8153b0655a
 Applied:
   target: 66235eea243ef8af111d074ce960d94767022bc8
   https: ea9cc0a850db7759e011c2b5d792f3de39de1ce8
   ctrl-alt-del: e12f1f0eb5c313449a07d2ecea98bea55aa46b73
+  refresh-temp: 0ad2cb72dabd5bbb4f759c7df7544d8153b0655a
 Unapplied:
 Hidden:
