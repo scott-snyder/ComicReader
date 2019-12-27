@@ -9,6 +9,8 @@ import com.blogspot.applications4android.comicreader.comictypes.RandomIndexedCom
 import com.blogspot.applications4android.comicreader.core.Strip;
 import com.blogspot.applications4android.comicreader.exceptions.ComicLatestException;
 
+import android.util.Log;
+
 public class Cyanide extends RandomIndexedComic {
 
 	private static final String Cyanide = "Cyanide";
@@ -30,7 +32,7 @@ public class Cyanide extends RandomIndexedComic {
 			String str;
 			String final_next = null;
 			while ((str = br.readLine()) != null) {
-				if(str.indexOf("/\" class=\"next-comic\"") != -1) {
+				if(str.indexOf("/\" class=\"nav-next\"") != -1) {
 					final_next = str;
 				}
 			}
@@ -45,12 +47,13 @@ public class Cyanide extends RandomIndexedComic {
 
 	@Override
 	protected int getPreviousStripId(BufferedReader br, String url) {
+                Log.d(Cyanide, "In getPreviousStripId, url = "+url);
 		int id = -1;
 		try {
 			String str;
 			String final_prev = null;
 			while ((str = br.readLine()) != null) {
-				if(str.indexOf("/\" class=\"previous-comic\"") != -1) {
+				if(str.indexOf("/\" class=\"nav-previous\"") != -1) {
 					final_prev = str;
 				}
 			}
@@ -114,6 +117,7 @@ public class Cyanide extends RandomIndexedComic {
 
 	@Override
 	protected String parse(String url, BufferedReader reader, Strip strip) throws IOException {
+                Log.d(Cyanide, "parse " + url);
 		boolean comic_found = true;
 		String str;
 		String final_str = null;
@@ -133,10 +137,10 @@ public class Cyanide extends RandomIndexedComic {
 			if(str.indexOf("\"og:url\"") != -1) {
 				final_title = str;
 			}
-			if(str.indexOf("/\" class=\"next-comic") != -1) {
+			if(str.indexOf("/\" class=\"nav-next") != -1) {
 				final_next = str;
 			}
-			if(str.indexOf("/\" class=\"previous-comic") != -1) {
+			if(str.indexOf("/\" class=\"nav-previous") != -1) {
 				final_prev = str;
 			}
 		}
