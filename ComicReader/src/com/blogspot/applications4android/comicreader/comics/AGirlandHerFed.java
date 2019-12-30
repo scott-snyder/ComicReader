@@ -7,17 +7,16 @@ import com.blogspot.applications4android.comicreader.core.Strip;
 import com.blogspot.applications4android.comicreader.exceptions.ComicLatestException;
 
 
-
 public class AGirlandHerFed extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://agirlandherfed.com/";
+		return "https://agirlandherfed.com/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://agirlandherfed.com/";
+		return "https://agirlandherfed.com/";
 	}
 
 	@Override
@@ -43,12 +42,12 @@ public class AGirlandHerFed extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://agirlandherfed.com/1." + num + ".html";
+		return "https://agirlandherfed.com/1." + num + ".html";
 	}
 
 	@Override
 	protected int getIdFromStripUrl(String url) {
-		String temp = url.replaceAll("http.*/1.", "");
+		String temp = url.replaceAll("https.*/1.", "");
 		temp = temp.replaceAll(".html", "");
 		return Integer.parseInt(temp);
 	}
@@ -77,6 +76,6 @@ public class AGirlandHerFed extends IndexedComic {
 		final_title = final_title.replaceAll(".jpg.*","");
 		strip.setTitle("A Girl and Her Fed: 1."+final_title);
 		strip.setText("-NA-");
-		return "http://agirlandherfed.com/"+final_str;
+		return "https://agirlandherfed.com/"+final_str;
 	}
 }
