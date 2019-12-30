@@ -12,15 +12,16 @@ public class ASofterWorld extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.asofterworld.com/";
+		return "https://www.asofterworld.com/";
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://www.asofterworld.com/";
+		return "https://www.asofterworld.com/";
 	}
 
 	@Override
 	protected int parseForLatestId(BufferedReader reader) throws IOException, ComicLatestException {
+          /*
 		String str;
 		String final_str = null;
 		while((str = reader.readLine()) != null) {
@@ -37,11 +38,13 @@ public class ASofterWorld extends IndexedComic {
     	final_str = final_str.replaceAll(".*World: ","");
     	final_str = final_str.replaceAll("</title>.*","");
 	    return Integer.parseInt(final_str);
+          */
+          return 1248;
 	}
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.asofterworld.com/index.php?id=" + num;
+		return "https://www.asofterworld.com/index.php?id=" + num;
 	}
 
 	@Override
@@ -66,28 +69,20 @@ public class ASofterWorld extends IndexedComic {
     	String str;
 		String final_str = null;
 		String final_title = null;
-		String final_itext = null;
 		while ((str = reader.readLine()) != null) {
-			int index1 = str.indexOf("onclick=\"makeAlert");
+			int index1 = str.indexOf("title=");
 			if (index1 != -1) {
 				final_str = str;
-				final_itext = str;
-			}
-			int index3 = str.indexOf("<title>");
-			if (index3 != -1) {
 				final_title = str;
 			}
 		}
 		final_str = final_str.replaceAll(".*src=\"","");
 		final_str = final_str.replaceAll("\".*","");
-    	final_title = final_title.replaceAll(".*<title>","");
-    	final_title = final_title.replaceAll("</title>.*","");
-		final_itext = final_itext.replaceAll(".*title=\"","");
-		final_itext = final_itext.replaceAll("\".*","");
+		final_title = final_title.replaceAll(".*title=\"","");
+		final_title = final_title.replaceAll("\".*","");
 		strip.setTitle(final_title);
-		strip.setText(final_itext);
-		if(!final_str.startsWith("http://www.asofterworld.com")) {
-			return "http://www.asofterworld.com/"+final_str;
+		if(!final_str.startsWith("https://www.asofterworld.com")) {
+			return "https://www.asofterworld.com/"+final_str;
 		}
 		return final_str;
 	}
