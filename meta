@@ -1,6 +1,6 @@
 Version: 1
-Previous: d7696486b5c430d78fbd4939f1cfb89b8e989a90
-Head: 19ccebb5221af1d573a5c1c185d599cb22506326
+Previous: e62c65d0103ca5f3414c97e373a3314b2a4961ff
+Head: ac1a423179bae7e6e43a670d21c07f3b8b73cf14
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
   https: 18c36b6dbdbcf1e54f95d91042ffa499b6d06a94
@@ -9,7 +9,6 @@ Applied:
   cyanide: 291a44bd708de25bc3664d6f6f497373c360e965
   cad2: b51fa1c76943c0949a152c1fbe72a46f63a0107e
   AGirlandHerFed: 047d92d3c15be2dbd3c743fd9036cf0351a97763
-  ASofterWorld: 084dfb606ef03d5a3ff83f9632b8c6b7e049ced5
-  refresh-temp: 19ccebb5221af1d573a5c1c185d599cb22506326
+  ASofterWorld: ac1a423179bae7e6e43a670d21c07f3b8b73cf14
 Unapplied:
 Hidden:
