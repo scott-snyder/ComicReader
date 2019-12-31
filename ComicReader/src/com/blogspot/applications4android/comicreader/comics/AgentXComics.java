@@ -12,7 +12,7 @@ public class AgentXComics extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.agent-x.com.au/";
+		return "https://www.agent-x.com.au/";
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class AgentXComics extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.agent-x.com.au/";
+		return "https://www.agent-x.com.au/";
 	}
 
 	@Override
@@ -64,10 +64,10 @@ public class AgentXComics extends ArchivedComic {
 	protected String parse(String url, BufferedReader reader, Strip strip) throws IOException  {
 		String str;
 		String final_str = null;
-		String final_title = url.replaceAll("http.*au/comic/", "");
+		String final_title = url.replaceAll("https.*au/comic/", "");
 		final_title = "AgentX: " + final_title.replaceAll("/", "");
 		while((str = reader.readLine()) != null) {
-			int index1 = str.indexOf("webcomic-object-full");
+			int index1 = str.indexOf("current-webcomic");
 			if (index1 != -1) {
 				final_str = str;
 			}
