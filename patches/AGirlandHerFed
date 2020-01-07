@@ -1,5 +1,5 @@
 Bottom: 84cce8388012949c6826e912401502cee351c549
-Top:    c4c834c01236b101f6567b849a4f4b59b5ccb15b
+Top:    4f237d259267b1f3fe1301211560d5f87078e5b5
 Author: scott snyder <sss@karma>
 Date:   2019-12-29 21:21:56 -0500
 
@@ -10,15 +10,22 @@ Fix a girl and her fed
 ---
 
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AGirlandHerFed.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AGirlandHerFed.java
-index 54a687a..a333025 100755
+index 54a687a..0ec88cf 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AGirlandHerFed.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AGirlandHerFed.java
-@@ -7,17 +7,16 @@ import com.blogspot.applications4android.comicreader.core.Strip;
+@@ -2,22 +2,21 @@ package com.blogspot.applications4android.comicreader.comics;
+ 
+ import java.io.BufferedReader;
+ import java.io.IOException;
+-import com.blogspot.applications4android.comicreader.comictypes.IndexedComic;
++import com.blogspot.applications4android.comicreader.comictypes.RandomIndexedComic;
+ import com.blogspot.applications4android.comicreader.core.Strip;
  import com.blogspot.applications4android.comicreader.exceptions.ComicLatestException;
  
  
 -
- public class AGirlandHerFed extends IndexedComic {
+-public class AGirlandHerFed extends IndexedComic {
++public class AGirlandHerFed extends RandomIndexedComic {
  
  	@Override
  	protected String getFrontPageUrl() {
@@ -33,7 +40,7 @@ index 54a687a..a333025 100755
  	}
  
  	@Override
-@@ -43,12 +42,12 @@ public class AGirlandHerFed extends IndexedComic {
+@@ -43,17 +42,33 @@ public class AGirlandHerFed extends IndexedComic {
  
  	@Override
  	public String getStripUrlFromId(int num) {
@@ -48,11 +55,87 @@ index 54a687a..a333025 100755
  		temp = temp.replaceAll(".html", "");
  		return Integer.parseInt(temp);
  	}
-@@ -77,6 +76,6 @@ public class AGirlandHerFed extends IndexedComic {
+ 
+ 	@Override
++	protected int parseForPrevId(String line, int def) {
++		if(line == null) {
++			return def;
++		}
++                return getIdFromStripUrl (line);
++	}
++
++	@Override
++	protected int parseForNextId(String line, int def) {
++		if(line == null) {
++			return def;
++		}
++                return getIdFromStripUrl (line);
++	}
++
++        @Override
+ 	protected boolean htmlNeeded() {
+ 		return true;
+ 	}
+@@ -77,6 +92,61 @@ public class AGirlandHerFed extends IndexedComic {
  		final_title = final_title.replaceAll(".jpg.*","");
  		strip.setTitle("A Girl and Her Fed: 1."+final_title);
  		strip.setText("-NA-");
 -		return "http://agirlandherfed.com/"+final_str;
 +		return "https://agirlandherfed.com/"+final_str;
++	}
++
++
++        @Override
++	protected int getNextStripId(BufferedReader br, String url) {
++          String str;
++          try {
++            while ((str = br.readLine()) != null) {
++              int i = str.indexOf("next.png");
++              if (i != -1) {
++                int i2 = str.lastIndexOf ("href=\"1.", i);
++                if (i2 != -1) {
++                  i2 += 8;
++                  int i3 = str.indexOf (".html", i2);
++                  if (i3 != -1) {
++                    return Integer.parseInt (str.substring (i2, i3));
++                  }
++                }
++              }
++            }
++          }
++          catch (Exception e) {
++            e.printStackTrace();
++          }
++          return 0;
++        }
++
++        @Override
++	protected int getPreviousStripId(BufferedReader br, String url) {
++          String str;
++          try {
++            while ((str = br.readLine()) != null) {
++              int i = str.indexOf("back.png");
++              if (i != -1) {
++                int i2 = str.lastIndexOf ("href=\"1.", i);
++                if (i2 != -1) {
++                  i2 += 8;
++                  int i3 = str.indexOf (".html", i2);
++                  if (i3 != -1) {
++                    return Integer.parseInt (str.substring (i2, i3));
++                  }
++                }
++              }
++            }
++          }
++          catch (Exception e) {
++            e.printStackTrace();
++          }
++          return 0;
++        }
++
++	@Override
++	protected String getRandUrl() {
++          // Not implemented.
++          return getStripUrlFromId (1);
  	}
  }
