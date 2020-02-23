@@ -31,11 +31,11 @@ public class GirlswithSlingshots extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.girlswithslingshots.com/";
+		return "https://www.girlswithslingshots.com/";
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://www.girlswithslingshots.com/";
+		return "https://www.girlswithslingshots.com/";
 	}
 
 	@Override
@@ -64,7 +64,9 @@ public class GirlswithSlingshots extends IndexedComic {
 	@Override
 	public int addException(int id, int increment) {
 		while(true) {
-			if(!mHash.containsKey(id)) {
+			if(!mHash.containsKey(id) &&
+                           (id <= 1293 || id >= 1924))
+                        {
 				break;
 			}
 			id += increment;
@@ -75,7 +77,7 @@ public class GirlswithSlingshots extends IndexedComic {
 	@Override
 	public String getStripUrlFromId(int num) {
 //Log.d("GWS", "num " + num);
-		return "http://www.girlswithslingshots.com/comic/gws-chaser-" + num;
+		return "https://www.girlswithslingshots.com/comic/gws-chaser-" + num;
 	}
 
 	@Override
