@@ -41,7 +41,7 @@ public class SMBC extends IndexedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.smbc-comics.com/";
+		return "https://www.smbc-comics.com/";
 	}
 
         // Latest ID is no longer in the html.
@@ -117,7 +117,7 @@ public class SMBC extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.smbc-comics.com/?id=" + num;
+		return "https://www.smbc-comics.com/?id=" + num;
 	}
 
 	@Override
@@ -158,7 +158,7 @@ public class SMBC extends IndexedComic {
 		image_url = image_url.replaceAll("\\(","%28");
 		image_url = image_url.replaceAll("\\)","%29");
 		if ( image_url.indexOf("http") == -1 ) {
-			image_url=image_url.replaceAll("^","http://www.smbc-comics.com/");
+			image_url=image_url.replaceAll("^","https://www.smbc-comics.com/");
 		}
 //Log.d("SMBC", "image_url " + image_url);
 		final_title = final_str.replaceAll(".*title=\"","");
