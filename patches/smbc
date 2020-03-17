@@ -1,0 +1,14 @@
+Bottom: 9e47abd9e6c71f6236759712df0f1d5d4485659b
+Top:    9e47abd9e6c71f6236759712df0f1d5d4485659b
+Author: scott snyder <sss@karma>
+Date:   2020-03-16 22:55:24 -0400
+
+SMBC fixes.
+
+Change all SMBC urls to https.
+
+
+
+---
+
+
