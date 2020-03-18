@@ -64,8 +64,7 @@ public class GirlswithSlingshots extends IndexedComic {
 	@Override
 	public int addException(int id, int increment) {
 		while(true) {
-			if(!mHash.containsKey(id) &&
-                           (id <= 1293 || id >= 1924))
+			if(!mHash.containsKey(id))
                         {
 				break;
 			}
