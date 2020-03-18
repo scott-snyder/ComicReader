@@ -1,5 +1,5 @@
 Bottom: 15bc4ccc76f3f588234e9fdf4a35288722134f6d
-Top:    9e47abd9e6c71f6236759712df0f1d5d4485659b
+Top:    4ebe2cd5f576b6f51a57b6dc6867be42bc56491d
 Author: scott snyder <sss@karma>
 Date:   2020-02-22 23:57:45 -0500
 
@@ -12,7 +12,7 @@ Switched to https; another block of missing IDs.
 ---
 
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
-index b94476e..bdd9044 100755
+index b94476e..f036506 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
 @@ -31,11 +31,11 @@ public class GirlswithSlingshots extends IndexedComic {
@@ -29,18 +29,17 @@ index b94476e..bdd9044 100755
  	}
  
  	@Override
-@@ -64,7 +64,9 @@ public class GirlswithSlingshots extends IndexedComic {
+@@ -64,7 +64,8 @@ public class GirlswithSlingshots extends IndexedComic {
  	@Override
  	public int addException(int id, int increment) {
  		while(true) {
 -			if(!mHash.containsKey(id)) {
-+			if(!mHash.containsKey(id) &&
-+                           (id <= 1293 || id >= 1924))
++			if(!mHash.containsKey(id))
 +                        {
  				break;
  			}
  			id += increment;
-@@ -75,7 +77,7 @@ public class GirlswithSlingshots extends IndexedComic {
+@@ -75,7 +76,7 @@ public class GirlswithSlingshots extends IndexedComic {
  	@Override
  	public String getStripUrlFromId(int num) {
  //Log.d("GWS", "num " + num);
