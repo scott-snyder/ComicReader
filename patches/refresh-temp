@@ -1,0 +1,23 @@
+Bottom: c647958cbc2a89da1cc7de3d3f4699de570a5c4b
+Top:    cdfc2cd4a24ede9ab361caeb3b55dc7676f1adc4
+Author: scott snyder <sss@karma>
+Date:   2020-03-18 09:17:29 -0400
+
+Refresh of gws
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
+index bdd9044..f036506 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
+@@ -64,8 +64,7 @@ public class GirlswithSlingshots extends IndexedComic {
+ 	@Override
+ 	public int addException(int id, int increment) {
+ 		while(true) {
+-			if(!mHash.containsKey(id) &&
+-                           (id <= 1293 || id >= 1924))
++			if(!mHash.containsKey(id))
+                         {
+ 				break;
+ 			}
