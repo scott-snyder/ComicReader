@@ -9,7 +9,6 @@ import com.blogspot.applications4android.comicreader.core.Bound;
 import com.blogspot.applications4android.comicreader.core.Comic;
 import com.blogspot.applications4android.comicreader.core.Strip;
 
-
 /**
  * This class is useful for all those comics which are released daily and are indexed
  * by calendar date.
