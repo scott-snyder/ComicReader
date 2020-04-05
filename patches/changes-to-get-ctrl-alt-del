@@ -1,19 +1,17 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    55e7eac21b0b10c57662e206ba8cc5fce0c37720
+Top:    e2a138e09e43d7158f46f9b3f4bb936be372e62a
 Author: scott snyder <sss@karma>
-Date:   2019-12-26 22:41:22 -0500
+Date:   2020-04-05 00:00:28 -0400
 
 changes to get ctrl-alt-del working again.
-
-
 
 ---
 
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-index 2577163..7abdfaf 100755
+index 2577163..86d5769 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-@@ -3,136 +3,343 @@ package com.blogspot.applications4android.comicreader.comics;
+@@ -3,136 +3,347 @@ package com.blogspot.applications4android.comicreader.comics;
  import java.io.BufferedReader;
  import java.io.IOException;
  import java.net.URI;
@@ -181,9 +179,9 @@ index 2577163..7abdfaf 100755
 +                i += 5;
 +              }
 +              else {
-+                i = url.lastIndexOf ("cad-");
++                i = url.lastIndexOf ("Strip");
 +                if (i >= 0) {
-+                  i += 4;
++                  i += 5;
 +                }
 +                else {
 +                  return null;
@@ -429,15 +427,18 @@ index 2577163..7abdfaf 100755
 +
 +        protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
 +        {
++            Log.d ("zzz", "getUrlsForMonth1 " + month);
 +            getMonths();
 +            TreeMap<Integer, CADStrip> l = mMonths.get (month);
 +            try {
 +              if (l == null) {
 +                if (mMonths.containsKey (month)) {
++                  Log.d ("zzz", "getUrlsForMonth2");
 +                  l = new TreeMap<Integer, CADStrip>();
 +                  URI uri = new URI("https://cad-comic.com/wp-admin/admin-ajax.php");
 +                  String data = "action=custom_cat_search&post_cat=all&post_month="+month;
 +                  String sdata = Downloader.downloadToString(uri, data);
++                  Log.d ("zzz", "getUrlsForMonth3 " + sdata);
 +                  JSONObject root = new JSONObject(sdata);
 +                  JSONArray posts = root.getJSONArray("posts");
 +                  List<String> ret = new ArrayList<String>();
@@ -446,6 +447,7 @@ index 2577163..7abdfaf 100755
 +                    String url = o.getString("comic");
 +                    if (url.lastIndexOf("KDM") >= 0) continue;
 +                    Calendar c = getTimeFromUrl (url);
++                    Log.d ("zzz", "getUrlsForMonth4 " + url + " " + c);
 +                    if (!month.equals (monthKey (c))) {
 +                      continue;
 +                    }
