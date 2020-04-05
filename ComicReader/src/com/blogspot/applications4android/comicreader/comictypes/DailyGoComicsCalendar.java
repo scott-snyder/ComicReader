@@ -158,7 +158,6 @@ public class DailyGoComicsCalendar {
 	 * @param increment whether to increment or decrement
 	 */
 	public void findValidDays(int year, int mon, int increment) {
-          Log.d("DGCC", "findValidDays");
 		int[] arr = null;
 		// out of bounds?
 		if(mon <= 0) {
@@ -172,8 +171,6 @@ public class DailyGoComicsCalendar {
 		while(true) {
 			arr = getValidDays(year, mon);
 			if(arr != null) {
-                                Log.d("DGCC", "set mValidDays");
-                                Log.d("DGCC", ""+arr.length);
 				mValidDays = arr;
 				mCurrMon = mon;
 				mCurrYr = year;
@@ -209,12 +206,8 @@ public class DailyGoComicsCalendar {
 	 * @return the array of valid days for this month
 	 */
 	private int[] getValidDays(int year, int month) {
-          Log.d("DGCC", "getValidDays");
 		try {
-                  Log.d("DGCC", "about to download");
 			String str = Downloader.downloadToString(new URI(mGcc.getCalendarJsUrl(year, month)));
-			Log.d("DGCC", "downloaded");
-			Log.d("DGCC", str);
 			// no result :(
 			if((str == null) || (str.length() <= 1)) {
 				return null;
@@ -237,7 +230,6 @@ public class DailyGoComicsCalendar {
 			return day_i; // days;
 		}
 		catch(Exception e) {
-                  Log.d("DGCC", "exception");
 			e.printStackTrace();
 			return null;
 		}
