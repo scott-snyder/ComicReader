@@ -1,0 +1,33 @@
+Bottom: cd85ba8e3756a543f6d9e278c9a410d424c826bf
+Top:    701da94896404ff49aa660ac3c4c76e49c9bbe3b
+Author: scott snyder <sss@karma>
+Date:   2020-04-05 00:09:12 -0400
+
+Refresh of cad-cah-smbc
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
+index 5a38db5..fd359bb 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
+@@ -48,10 +48,7 @@ public abstract class DailyComic extends Comic {
+ 	 */
+ 	public Calendar getCurrentCal() {
+ 		Strip s = getCurrentStrip();
+-          Log.d("zzz", "getCurrentCal " + s.uid() + " " +  s.getTitle());
+-		Calendar c = getTimeFromUrl(s.uid());
+-                Log.d("zzz", "getCurrentCal2" + c);
+-                return c;
++		return getTimeFromUrl(s.uid());
+ 	}
+ 
+ 	@Override
+@@ -88,7 +85,6 @@ public abstract class DailyComic extends Comic {
+ 
+ 	@Override
+ 	protected String getNextStripUrl() {
+-          Log.d("zzz", "getNextStripUrl");
+ 		Calendar cal = getCurrentCal();
+ 		cal.add(Calendar.DAY_OF_MONTH, 1);
+ 		addException(cal, 1);
