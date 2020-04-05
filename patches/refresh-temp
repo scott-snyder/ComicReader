@@ -1,0 +1,208 @@
+Bottom: cdfc2cd4a24ede9ab361caeb3b55dc7676f1adc4
+Top:    9312fb88fd80d3da765720948039bba6fca8caf9
+Author: scott snyder <sss@karma>
+Date:   2020-04-04 23:53:24 -0400
+
+Refresh of ctrl-alt-del
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
+index e6cb452..524b305 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
+@@ -41,7 +41,6 @@ class CADStrip {
+ 
+ public class CtrlAltDel extends DailyComic {
+         protected SortedMap<String, TreeMap<Integer, CADStrip> > mMonths;
+-        //protected SortedMap<String, CADStrip> mUrls;
+         protected Calendar mRefreshTime;
+ 
+   	/**
+@@ -50,7 +49,6 @@ public class CtrlAltDel extends DailyComic {
+ 	public CtrlAltDel() {
+           super();
+           mMonths = new TreeMap<String, TreeMap<Integer, CADStrip> >();
+-          //mUrls = new TreeMap<String, CADStrip>();
+ 	}
+ 
+ 
+@@ -61,9 +59,7 @@ public class CtrlAltDel extends DailyComic {
+ 
+         protected Calendar getFirstCalendar()
+         {
+-          Log.d("zzz", "getFirstCalendar1");
+           getMonths();
+-          Log.d("zzz", "getFirstCalendar2");
+           String month = mMonths.firstKey();
+           if (month == null) return null;
+           SortedMap<Integer, CADStrip> dlist = getUrlsForMonth (month);
+@@ -72,7 +68,6 @@ public class CtrlAltDel extends DailyComic {
+           int m = Integer.parseInt (month.substring (4, 6));
+           Calendar c = Calendar.getInstance();
+           c.set (y, m-1, d);
+-          Log.d("zzz", "getFirstCalendar3 " + y + " " + m + " " + d + " " + c);
+           return c;
+         }
+ 
+@@ -94,32 +89,6 @@ public class CtrlAltDel extends DailyComic {
+   
+         protected Calendar getTimeFromUrl(String url)
+         {
+-          //CADStrip strip = mUrls.get (url);
+-          //Log.d("zzz", "getTimeFromUrl1 " + url);
+-          //if (strip == null) {
+-          //  Calendar cc = guessTimeFromUrl (url);
+-          //  if (cc != null) {
+-          //    getUrlsForMonth (monthKey (cc));
+-          //    strip = mUrls.get (url);
+-          //    if (strip == null) {
+-          //      Calendar cc2 = cc;
+-          //      cc2.add (Calendar.MONTH, -1);
+-          //      getUrlsForMonth (monthKey (cc));
+-          //      strip = mUrls.get (url);
+-          //    }
+-          //    if (strip == null) {
+-          //      Calendar cc2 = cc;
+-          //      cc2.add (Calendar.MONTH, 1);
+-          //      getUrlsForMonth (monthKey (cc));
+-          //      strip = mUrls.get (url);
+-          //    }
+-          //  }
+-          //}
+-          //if (strip == null) return null;
+-          //Log.d("zzz", "getTimeFromUrl2 " + strip.mCal);
+-          //return strip.mCal;
+-          // https://..../ENG_201811121.png
+-          Log.d("zzz", "getTimeFromUrl " + url);
+           int i = url.lastIndexOf ("ENG_");
+           if (i >= 0) {
+             i += 4;
+@@ -150,7 +119,6 @@ public class CtrlAltDel extends DailyComic {
+           int d = Integer.parseInt (url.substring (i+6, i+8));
+           Calendar c = Calendar.getInstance();
+           c.set (y, m-1, d);
+-          Log.d("zzz", "getTimeFromUrl " + y + " " + m + " " + d + " " + c);
+           return c;
+         }
+ 
+@@ -158,7 +126,6 @@ public class CtrlAltDel extends DailyComic {
+         private Calendar guessTimeFromUrl(String url)
+         {
+            // https://..../ENG_201811121.png
+-           Log.d("zzz", "guessTimeFromUrl " + url);
+            int i = url.lastIndexOf ("ENG_");
+            if (i >= 0) {
+              i += 4;
+@@ -183,7 +150,6 @@ public class CtrlAltDel extends DailyComic {
+            int d = Integer.parseInt (url.substring (i+6, i+8));
+            Calendar c = Calendar.getInstance();
+            c.set (y, m-1, d);
+-           Log.d("zzz", "guessTimeFromUrl " + y + " " + m + " " + d + " " + c);
+            return c;
+         }
+ 
+@@ -198,7 +164,6 @@ public class CtrlAltDel extends DailyComic {
+ 
+         public String getUrlFromTime(Calendar cal)
+         {
+-          Log.d("zzz", "getUrlFromTime1 " + cal);
+           CADStrip strip = getStripFromTime (cal);
+           if (strip == null) return null;
+           return strip.mUrl;
+@@ -212,7 +177,6 @@ public class CtrlAltDel extends DailyComic {
+ 	@Override
+ 	public void clearCache() {
+           mMonths.clear();
+-          //mUrls.clear();
+           super.clearCache();
+ 	}
+ 
+@@ -225,10 +189,6 @@ public class CtrlAltDel extends DailyComic {
+ 	 */
+ 	public void addException(Calendar in, int increment)
+         {
+-          //while (getUrlFromTime (in) == null) {
+-          //in.add (Calendar.DAY_OF_MONTH, increment);
+-          //}
+-
+           if (getUrlFromTime (in) != null) return;
+ 
+           int d = in.get (Calendar.DAY_OF_MONTH);
+@@ -285,23 +245,18 @@ public class CtrlAltDel extends DailyComic {
+ 
+         public CADStrip getStripFromTime(Calendar cal)
+         {
+-          Log.d("zzz", "getStripFromTime1 " + cal);
+           while (true) {
+             int d = cal.get (Calendar.DAY_OF_MONTH);
+             String month = monthKey (cal);
+             getMonths();
+             SortedMap<Integer, CADStrip> l = getUrlsForMonth (month);
+-            Log.d("zzz", "getStripFromTime2 " + month);
+             if (l == null) {
+-              Log.d("zzz", "getStripFromTime3 null");
+               return null;
+             }
+             CADStrip strip = l.get (d);
+             if (strip != null) {
+-              Log.d("zzz", "getStripFromTime4 " + strip.mUrl);
+               return strip;
+             }
+-            //cal.add (Calendar.DAY_OF_MONTH, 1);
+             return null;
+           }
+         }
+@@ -327,7 +282,6 @@ public class CtrlAltDel extends DailyComic {
+           Calendar c = Calendar.getInstance();
+           if (c.after (mRefreshTime)) {
+             mMonths.clear();
+-            //mUrls.clear();
+           }
+ 
+           if (mMonths.size() > 0) return mMonths;
+@@ -340,7 +294,6 @@ public class CtrlAltDel extends DailyComic {
+             for (int i = 0; i < months.length(); i++) {
+               JSONObject o = months.getJSONObject(i);
+               mMonths.put (o.getString("post_date"), null);
+-              Log.d("zzz", "getMonths " + o.getString("post_date"));
+             }
+           }
+           catch (Exception e) {
+@@ -355,18 +308,15 @@ public class CtrlAltDel extends DailyComic {
+ 
+         protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
+         {
+-            Log.d ("zzz", "getUrlsForMonth1 " + month);
+             getMonths();
+             TreeMap<Integer, CADStrip> l = mMonths.get (month);
+             try {
+               if (l == null) {
+                 if (mMonths.containsKey (month)) {
+-                  Log.d ("zzz", "getUrlsForMonth2");
+                   l = new TreeMap<Integer, CADStrip>();
+                   URI uri = new URI("https://cad-comic.com/wp-admin/admin-ajax.php");
+                   String data = "action=custom_cat_search&post_cat=all&post_month="+month;
+                   String sdata = Downloader.downloadToString(uri, data);
+-                  Log.d ("zzz", "getUrlsForMonth3 " + sdata);
+                   JSONObject root = new JSONObject(sdata);
+                   JSONArray posts = root.getJSONArray("posts");
+                   List<String> ret = new ArrayList<String>();
+@@ -375,17 +325,12 @@ public class CtrlAltDel extends DailyComic {
+                     String url = o.getString("comic");
+                     if (url.lastIndexOf("KDM") >= 0) continue;
+                     Calendar c = getTimeFromUrl (url);
+-                    Log.d ("zzz", "getUrlsForMonth4 " + url + " " + c);
+                     if (!month.equals (monthKey (c))) {
+-                      Log.d("zzz", "getUrlsForMonth MISMATCH " + month + " "
+-                            + monthKey (c) + " " + c);
+                       continue;
+                     }
+                     int dom = c.get (Calendar.DAY_OF_MONTH);
+                     CADStrip strip = new CADStrip (url, o.getString("title"), o.getString("date"), c);
+                     l.put (dom, strip);
+-                    //mUrls.put (url, strip);
+-                    Log.d("zzz", "getUrlsForMonth " + month + " " + dom + " " + url);
+                   }
+                   mMonths.put (month, l);
+                 }

@@ -1,6 +1,6 @@
 Version: 1
-Previous: 2d9d8e75656fbb94b29667c74259a21082f7e609
-Head: 05fa4481bca732f265798072aa5522fd754bf014
+Previous: 6832c2d3a8c7fa5cdedeff8349476e2977b11787
+Head: 5d8c765ba1b80b0c361d71c32ecc5d9777510e9f
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
   ctrl-alt-del: 6b6eda4edfa8068cc0c78a62a6ea64cc050fc39e
@@ -12,5 +12,6 @@ Applied:
   agent-x-wip: a8e8f9c6a09baac84ac632bea23c639c2d3e776c
   gws: e7e3b9554613c5346e38c75c7b1a956c583a1390
   smbc: 05fa4481bca732f265798072aa5522fd754bf014
+  refresh-temp: 5d8c765ba1b80b0c361d71c32ecc5d9777510e9f
 Unapplied:
 Hidden:
