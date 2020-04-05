@@ -157,7 +157,6 @@ public class DailyGoComicsCom extends DailyComic {
             }
         }
 //Log.d("GO_Comics", "final_string " + final_str);
-        Log.d("DGCC", "final_string " + final_str);
     	final_str = final_str.replaceAll(".*=\"","");
         final_str = final_str.replaceAll("\"/*","");
 
