@@ -1,9 +1,9 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    da08e11e3297a1909e99d2fe26b6b011464cae48
+Top:    90c95405ffdedfe33d2179159d16ba864477cf48
 Author: scott snyder <sss@karma>
-Date:   2020-04-05 00:02:44 -0400
+Date:   2020-04-05 00:05:51 -0400
 
-changes to get ctrl-alt-del working again.
+Changes to get ctrl-alt-del, cyanide&happiness, and SMBC working again.
 
 ---
 
@@ -516,7 +516,7 @@ index 1a07cdb..c93fd75 100755
  			}
  		}
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/SMBC.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/SMBC.java
-index be31ea7..bc003b7 100644
+index be31ea7..59fc456 100644
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/SMBC.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/SMBC.java
 @@ -7,11 +7,14 @@ import java.text.DateFormat;
@@ -535,7 +535,7 @@ index be31ea7..bc003b7 100644
  
  
  public class SMBC extends IndexedComic {
-@@ -33,7 +36,7 @@ public class SMBC extends IndexedComic {
+@@ -33,38 +36,74 @@ public class SMBC extends IndexedComic {
  
  	@Override
  	protected String getFrontPageUrl() {
@@ -544,8 +544,9 @@ index be31ea7..bc003b7 100644
  	}
  
  	@Override
-@@ -41,30 +44,66 @@ public class SMBC extends IndexedComic {
- 		return "http://www.smbc-comics.com/";
+ 	public String getComicWebPageUrl() {
+-		return "http://www.smbc-comics.com/";
++		return "https://www.smbc-comics.com/";
  	}
  
 +        // Latest ID is no longer in the html.
@@ -631,6 +632,24 @@ index be31ea7..bc003b7 100644
  	@Override
  	public int addException(int id, int increment) {
  		while(true) {
+@@ -78,7 +117,7 @@ public class SMBC extends IndexedComic {
+ 
+ 	@Override
+ 	public String getStripUrlFromId(int num) {
+-		return "http://www.smbc-comics.com/?id=" + num;
++		return "https://www.smbc-comics.com/?id=" + num;
+ 	}
+ 
+ 	@Override
+@@ -119,7 +158,7 @@ public class SMBC extends IndexedComic {
+ 		image_url = image_url.replaceAll("\\(","%28");
+ 		image_url = image_url.replaceAll("\\)","%29");
+ 		if ( image_url.indexOf("http") == -1 ) {
+-			image_url=image_url.replaceAll("^","http://www.smbc-comics.com/");
++			image_url=image_url.replaceAll("^","https://www.smbc-comics.com/");
+ 		}
+ //Log.d("SMBC", "image_url " + image_url);
+ 		final_title = final_str.replaceAll(".*title=\"","");
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
 index 43a7672..5a38db5 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
