@@ -1,0 +1,22 @@
+Bottom: d32badb3e6f7e6e898aca560fe896064854ecf70
+Top:    890f94ab0df39a28387189891e3122b8b7e97940
+Author: scott snyder <sss@karma>
+Date:   2020-04-05 00:14:31 -0400
+
+Refresh of cad-cah-smbc
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
+index b951aa4..fee9539 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
+@@ -557,7 +557,7 @@ public abstract class Comic extends ComicParser {
+ 			mCurrent.setNext(getNextStripUrl());
+ 		}
+ 		String uid = mCurrent.uid();
+-               Strip s = _querySetCurrentUid(mCurrent.getNext());
++		Strip s = _querySetCurrentUid(mCurrent.getNext());
+ 		s.setPrevious(uid);
+ 		return s;
+ 	}
