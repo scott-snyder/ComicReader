@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    2b7a7a1bc55ea8e9e021c2aa4f04cc2e6eb01023
+Top:    c0a8e8bda4499a7563c7600be6097fab3f5a2817
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -647,7 +647,7 @@ index be31ea7..0e855a7 100644
  //Log.d("SMBC", "image_url " + image_url);
  		final_title = final_str.replaceAll(".*title=\"","");
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java
-index 4a76ea9..d31eb00 100644
+index 4a76ea9..dcf84cf 100644
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java
 @@ -5,7 +5,7 @@ import java.io.IOException;
@@ -674,15 +674,7 @@ index 4a76ea9..d31eb00 100644
  	}
  
  	@Override
-@@ -157,6 +157,7 @@ public class DailyGoComicsCom extends DailyComic {
-             }
-         }
- //Log.d("GO_Comics", "final_string " + final_str);
-+        Log.d("DGCC", "final_string " + final_str);
-     	final_str = final_str.replaceAll(".*=\"","");
-         final_str = final_str.replaceAll("\"/*","");
- 
-@@ -185,7 +186,7 @@ public class DailyGoComicsCom extends DailyComic {
+@@ -185,7 +185,7 @@ public class DailyGoComicsCom extends DailyComic {
  	 * @return the format string
  	 */
  	private String _getUrlFormat() {
