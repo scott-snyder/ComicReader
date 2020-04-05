@@ -1,7 +1,7 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    e2b43db15a0ac955fe922bf02b230e2b3a00abbc
+Top:    9aaba7cbab736b2a5c004b9732828d8710b8764b
 Author: scott snyder <sss@karma>
-Date:   2020-04-05 00:00:28 -0400
+Date:   2020-04-05 00:02:44 -0400
 
 changes to get ctrl-alt-del working again.
 
@@ -463,7 +463,7 @@ index 2577163..524b305 100755
 +        }
  }
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
-index 1a07cdb..2a8ed6f 100755
+index 1a07cdb..4916950 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
 @@ -9,6 +9,8 @@ import com.blogspot.applications4android.comicreader.comictypes.RandomIndexedCom
@@ -499,6 +499,15 @@ index 1a07cdb..2a8ed6f 100755
  					final_prev = str;
  				}
  			}
+@@ -79,7 +82,7 @@ public class Cyanide extends RandomIndexedComic {
+ 			throw e;
+ 		}
+ 		final_str = final_str.replaceAll(".*comics%2F","");
+-		final_str = final_str.replaceAll("%2F.*","");
++		final_str = final_str.replaceAll("\".*","");
+ 		Log.d(Cyanide, "In parseForLatestId, final_str = "+final_str);
+ 		return Integer.parseInt(final_str);
+ 	}
 @@ -114,6 +117,7 @@ public class Cyanide extends RandomIndexedComic {
  
  	@Override
