@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    83af651f0a55fe2c2ed6d1737ee8ed2dcf84e99f
+Top:    36c92f029ce2ba3dd686ce34c5250088ca5527e8
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -646,18 +646,6 @@ index be31ea7..0e855a7 100644
  		}
  //Log.d("SMBC", "image_url " + image_url);
  		final_title = final_str.replaceAll(".*title=\"","");
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
-index 43a7672..305d052 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
-@@ -9,7 +9,6 @@ import com.blogspot.applications4android.comicreader.core.Bound;
- import com.blogspot.applications4android.comicreader.core.Comic;
- import com.blogspot.applications4android.comicreader.core.Strip;
- 
--
- /**
-  * This class is useful for all those comics which are released daily and are indexed
-  * by calendar date.
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
 index 6528b0e..03e033e 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
