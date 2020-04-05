@@ -1,5 +1,5 @@
-Bottom: fbee8536221bbc6aee1f783f9347a54cf0e429a5
-Top:    84cce8388012949c6826e912401502cee351c549
+Bottom: 78ab9ab54e3365ff914a7eb9e65779713ac01532
+Top:    505a3ef5484e44a38b74f7c024b2909f08014910
 Author: scott snyder <sss@karma>
 Date:   2019-12-27 00:47:12 -0500
 
@@ -9,10 +9,10 @@ cad fix..cad fix....
 ---
 
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-index 336e89a..e6cb452 100755
+index 7abdfaf..86d5769 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-@@ -135,9 +135,9 @@ public class CtrlAltDel extends DailyComic {
+@@ -104,9 +104,9 @@ public class CtrlAltDel extends DailyComic {
                  i += 5;
                }
                else {
@@ -24,7 +24,7 @@ index 336e89a..e6cb452 100755
                  }
                  else {
                    return null;
-@@ -355,15 +355,18 @@ public class CtrlAltDel extends DailyComic {
+@@ -308,15 +308,18 @@ public class CtrlAltDel extends DailyComic {
  
          protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
          {
@@ -43,11 +43,11 @@ index 336e89a..e6cb452 100755
                    JSONObject root = new JSONObject(sdata);
                    JSONArray posts = root.getJSONArray("posts");
                    List<String> ret = new ArrayList<String>();
-@@ -372,6 +375,7 @@ public class CtrlAltDel extends DailyComic {
+@@ -325,6 +328,7 @@ public class CtrlAltDel extends DailyComic {
                      String url = o.getString("comic");
                      if (url.lastIndexOf("KDM") >= 0) continue;
                      Calendar c = getTimeFromUrl (url);
 +                    Log.d ("zzz", "getUrlsForMonth4 " + url + " " + c);
                      if (!month.equals (monthKey (c))) {
-                       Log.d("zzz", "getUrlsForMonth MISMATCH " + month + " "
-                             + monthKey (c) + " " + c);
+                       continue;
+                     }

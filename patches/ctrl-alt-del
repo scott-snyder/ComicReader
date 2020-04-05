@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    691a892b6cfec33c8a1ec7d51b1bc05d552ddde1
+Top:    55e7eac21b0b10c57662e206ba8cc5fce0c37720
 Author: scott snyder <sss@karma>
 Date:   2019-12-26 22:41:22 -0500
 
@@ -10,10 +10,10 @@ changes to get ctrl-alt-del working again.
 ---
 
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-index 2577163..336e89a 100755
+index 2577163..7abdfaf 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-@@ -3,136 +3,394 @@ package com.blogspot.applications4android.comicreader.comics;
+@@ -3,136 +3,343 @@ package com.blogspot.applications4android.comicreader.comics;
  import java.io.BufferedReader;
  import java.io.IOException;
  import java.net.URI;
@@ -60,7 +60,6 @@ index 2577163..336e89a 100755
  
 +public class CtrlAltDel extends DailyComic {
 +        protected SortedMap<String, TreeMap<Integer, CADStrip> > mMonths;
-+        //protected SortedMap<String, CADStrip> mUrls;
 +        protected Calendar mRefreshTime;
  
 -	@Override
@@ -72,7 +71,6 @@ index 2577163..336e89a 100755
 +	public CtrlAltDel() {
 +          super();
 +          mMonths = new TreeMap<String, TreeMap<Integer, CADStrip> >();
-+          //mUrls = new TreeMap<String, CADStrip>();
  	}
  
 -	@Override
@@ -138,9 +136,7 @@ index 2577163..336e89a 100755
 -	}
 +        protected Calendar getFirstCalendar()
 +        {
-+          Log.d("zzz", "getFirstCalendar1");
 +          getMonths();
-+          Log.d("zzz", "getFirstCalendar2");
 +          String month = mMonths.firstKey();
 +          if (month == null) return null;
 +          SortedMap<Integer, CADStrip> dlist = getUrlsForMonth (month);
@@ -149,7 +145,6 @@ index 2577163..336e89a 100755
 +          int m = Integer.parseInt (month.substring (4, 6));
 +          Calendar c = Calendar.getInstance();
 +          c.set (y, m-1, d);
-+          Log.d("zzz", "getFirstCalendar3 " + y + " " + m + " " + d + " " + c);
 +          return c;
 +        }
 +
@@ -171,32 +166,6 @@ index 2577163..336e89a 100755
 +  
 +        protected Calendar getTimeFromUrl(String url)
 +        {
-+          //CADStrip strip = mUrls.get (url);
-+          //Log.d("zzz", "getTimeFromUrl1 " + url);
-+          //if (strip == null) {
-+          //  Calendar cc = guessTimeFromUrl (url);
-+          //  if (cc != null) {
-+          //    getUrlsForMonth (monthKey (cc));
-+          //    strip = mUrls.get (url);
-+          //    if (strip == null) {
-+          //      Calendar cc2 = cc;
-+          //      cc2.add (Calendar.MONTH, -1);
-+          //      getUrlsForMonth (monthKey (cc));
-+          //      strip = mUrls.get (url);
-+          //    }
-+          //    if (strip == null) {
-+          //      Calendar cc2 = cc;
-+          //      cc2.add (Calendar.MONTH, 1);
-+          //      getUrlsForMonth (monthKey (cc));
-+          //      strip = mUrls.get (url);
-+          //    }
-+          //  }
-+          //}
-+          //if (strip == null) return null;
-+          //Log.d("zzz", "getTimeFromUrl2 " + strip.mCal);
-+          //return strip.mCal;
-+          // https://..../ENG_201811121.png
-+          Log.d("zzz", "getTimeFromUrl " + url);
 +          int i = url.lastIndexOf ("ENG_");
 +          if (i >= 0) {
 +            i += 4;
@@ -227,7 +196,6 @@ index 2577163..336e89a 100755
 +          int d = Integer.parseInt (url.substring (i+6, i+8));
 +          Calendar c = Calendar.getInstance();
 +          c.set (y, m-1, d);
-+          Log.d("zzz", "getTimeFromUrl " + y + " " + m + " " + d + " " + c);
 +          return c;
 +        }
 +
@@ -235,7 +203,6 @@ index 2577163..336e89a 100755
 +        private Calendar guessTimeFromUrl(String url)
 +        {
 +           // https://..../ENG_201811121.png
-+           Log.d("zzz", "guessTimeFromUrl " + url);
 +           int i = url.lastIndexOf ("ENG_");
 +           if (i >= 0) {
 +             i += 4;
@@ -260,7 +227,6 @@ index 2577163..336e89a 100755
 +           int d = Integer.parseInt (url.substring (i+6, i+8));
 +           Calendar c = Calendar.getInstance();
 +           c.set (y, m-1, d);
-+           Log.d("zzz", "guessTimeFromUrl " + y + " " + m + " " + d + " " + c);
 +           return c;
 +        }
 +
@@ -279,7 +245,6 @@ index 2577163..336e89a 100755
 +
 +        public String getUrlFromTime(Calendar cal)
 +        {
-+          Log.d("zzz", "getUrlFromTime1 " + cal);
 +          CADStrip strip = getStripFromTime (cal);
 +          if (strip == null) return null;
 +          return strip.mUrl;
@@ -333,7 +298,6 @@ index 2577163..336e89a 100755
 -		return final_str;
 +	public void clearCache() {
 +          mMonths.clear();
-+          //mUrls.clear();
 +          super.clearCache();
  	}
  
@@ -346,10 +310,6 @@ index 2577163..336e89a 100755
 +	 */
 +	public void addException(Calendar in, int increment)
 +        {
-+          //while (getUrlFromTime (in) == null) {
-+          //in.add (Calendar.DAY_OF_MONTH, increment);
-+          //}
-+
 +          if (getUrlFromTime (in) != null) return;
 +
 +          int d = in.get (Calendar.DAY_OF_MONTH);
@@ -406,23 +366,18 @@ index 2577163..336e89a 100755
 +
 +        public CADStrip getStripFromTime(Calendar cal)
 +        {
-+          Log.d("zzz", "getStripFromTime1 " + cal);
 +          while (true) {
 +            int d = cal.get (Calendar.DAY_OF_MONTH);
 +            String month = monthKey (cal);
 +            getMonths();
 +            SortedMap<Integer, CADStrip> l = getUrlsForMonth (month);
-+            Log.d("zzz", "getStripFromTime2 " + month);
 +            if (l == null) {
-+              Log.d("zzz", "getStripFromTime3 null");
 +              return null;
 +            }
 +            CADStrip strip = l.get (d);
 +            if (strip != null) {
-+              Log.d("zzz", "getStripFromTime4 " + strip.mUrl);
 +              return strip;
 +            }
-+            //cal.add (Calendar.DAY_OF_MONTH, 1);
 +            return null;
 +          }
 +        }
@@ -448,7 +403,6 @@ index 2577163..336e89a 100755
 +          Calendar c = Calendar.getInstance();
 +          if (c.after (mRefreshTime)) {
 +            mMonths.clear();
-+            //mUrls.clear();
 +          }
 +
 +          if (mMonths.size() > 0) return mMonths;
@@ -461,7 +415,6 @@ index 2577163..336e89a 100755
 +            for (int i = 0; i < months.length(); i++) {
 +              JSONObject o = months.getJSONObject(i);
 +              mMonths.put (o.getString("post_date"), null);
-+              Log.d("zzz", "getMonths " + o.getString("post_date"));
 +            }
 +          }
 +          catch (Exception e) {
@@ -494,15 +447,11 @@ index 2577163..336e89a 100755
 +                    if (url.lastIndexOf("KDM") >= 0) continue;
 +                    Calendar c = getTimeFromUrl (url);
 +                    if (!month.equals (monthKey (c))) {
-+                      Log.d("zzz", "getUrlsForMonth MISMATCH " + month + " "
-+                            + monthKey (c) + " " + c);
 +                      continue;
 +                    }
 +                    int dom = c.get (Calendar.DAY_OF_MONTH);
 +                    CADStrip strip = new CADStrip (url, o.getString("title"), o.getString("date"), c);
 +                    l.put (dom, strip);
-+                    //mUrls.put (url, strip);
-+                    Log.d("zzz", "getUrlsForMonth " + month + " " + dom + " " + url);
 +                  }
 +                  mMonths.put (month, l);
 +                }
