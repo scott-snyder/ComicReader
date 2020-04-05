@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    36c92f029ce2ba3dd686ce34c5250088ca5527e8
+Top:    5ce44c6b324d322e8ee5f118cdb848469867555f
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -647,46 +647,17 @@ index be31ea7..0e855a7 100644
  //Log.d("SMBC", "image_url " + image_url);
  		final_title = final_str.replaceAll(".*title=\"","");
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
-index 6528b0e..03e033e 100755
+index 6528b0e..682f141 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
-@@ -158,6 +158,7 @@ public class DailyGoComicsCalendar {
- 	 * @param increment whether to increment or decrement
- 	 */
- 	public void findValidDays(int year, int mon, int increment) {
-+          Log.d("DGCC", "findValidDays");
- 		int[] arr = null;
- 		// out of bounds?
- 		if(mon <= 0) {
-@@ -171,6 +172,8 @@ public class DailyGoComicsCalendar {
- 		while(true) {
- 			arr = getValidDays(year, mon);
- 			if(arr != null) {
-+                                Log.d("DGCC", "set mValidDays");
-+                                Log.d("DGCC", ""+arr.length);
- 				mValidDays = arr;
- 				mCurrMon = mon;
- 				mCurrYr = year;
-@@ -206,8 +209,11 @@ public class DailyGoComicsCalendar {
- 	 * @return the array of valid days for this month
- 	 */
+@@ -208,7 +208,6 @@ public class DailyGoComicsCalendar {
  	private int[] getValidDays(int year, int month) {
-+          Log.d("DGCC", "getValidDays");
  		try {
-+                  Log.d("DGCC", "about to download");
  			String str = Downloader.downloadToString(new URI(mGcc.getCalendarJsUrl(year, month)));
-+			Log.d("DGCC", "downloaded");
- 			Log.d("DGCC", str);
+-			Log.d("DGCC", str);
  			// no result :(
  			if((str == null) || (str.length() <= 1)) {
-@@ -231,6 +237,7 @@ public class DailyGoComicsCalendar {
- 			return day_i; // days;
- 		}
- 		catch(Exception e) {
-+                  Log.d("DGCC", "exception");
- 			e.printStackTrace();
- 			return null;
- 		}
+ 				return null;
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java
 index 4a76ea9..d31eb00 100644
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCom.java
