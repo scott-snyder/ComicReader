@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    bb126e2e61b3558997fa8a5b5a49581aa0f266fc
+Top:    bf20314bdfa8d25fee535f8235ac3e41aeb24f11
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -687,7 +687,7 @@ index 4a76ea9..dcf84cf 100644
  
  	/**
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
-index b4ee56f..b951aa4 100755
+index b4ee56f..fee9539 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
 @@ -557,7 +557,7 @@ public abstract class Comic extends ComicParser {
@@ -695,7 +695,7 @@ index b4ee56f..b951aa4 100755
  		}
  		String uid = mCurrent.uid();
 -		Strip s = _querySetCurrentUid(mCurrent.getNext());
-+               Strip s = _querySetCurrentUid(mCurrent.getNext());
++		Strip s = _querySetCurrentUid(mCurrent.getNext());
  		s.setPrevious(uid);
  		return s;
  	}
