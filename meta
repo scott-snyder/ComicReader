@@ -1,14 +1,13 @@
 Version: 1
-Previous: a36dba2165b34184eb8699e8482fd0455fc181df
-Head: 0766dfac4e815a48668138f5dbf19c0e2984db83
+Previous: c271bd8cb188682f33463939fcc9a9599e2571e3
+Head: 85aa8ebf0269aea970234ddfda15b67c71b6e080
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
-  cad-cah-smbc: 92a54bb1ecc5002da4c25d43d3f067cfa89772b4
-  panties: b6d9ce930f0e552f2b2b9c482d3c7680106c4920
-  AGirlandHerFed: 5f43c9eb4a2d9d82fce3b870069fa8273a998f17
-  ASofterWorld: 80a4db5afa3ccf6a4e3a78efe8bc345f103e978f
-  agent-x-wip: b9103d6840b94f84a0f0a1963350a3690a2d4a38
-  gws: c778c23d74f3a376ec4d189f020764be51bc809e
-  refresh-temp: 0766dfac4e815a48668138f5dbf19c0e2984db83
+  cad-cah-smbc: c78778d204d47dafdfae8db222d8ffd1248df9d3
+  panties: 3be6d6083d89cf6cdd157b98c8e81ea996e1413f
+  AGirlandHerFed: 701b3d921cbf8cfbbacbd8cafa3e450e0564cb04
+  ASofterWorld: 25beb493359113d0495d32034ddd2024ef4f9924
+  agent-x-wip: d8120d077ccbb7385a1be1ced49289aad4ee8ebb
+  gws: 85aa8ebf0269aea970234ddfda15b67c71b6e080
 Unapplied:
 Hidden:
