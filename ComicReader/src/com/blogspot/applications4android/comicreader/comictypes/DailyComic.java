@@ -48,10 +48,7 @@ public abstract class DailyComic extends Comic {
 	 */
 	public Calendar getCurrentCal() {
 		Strip s = getCurrentStrip();
-          Log.d("zzz", "getCurrentCal " + s.uid() + " " +  s.getTitle());
-		Calendar c = getTimeFromUrl(s.uid());
-                Log.d("zzz", "getCurrentCal2" + c);
-                return c;
+		return getTimeFromUrl(s.uid());
 	}
 
 	@Override
@@ -88,7 +85,6 @@ public abstract class DailyComic extends Comic {
 
 	@Override
 	protected String getNextStripUrl() {
-          Log.d("zzz", "getNextStripUrl");
 		Calendar cal = getCurrentCal();
 		cal.add(Calendar.DAY_OF_MONTH, 1);
 		addException(cal, 1);
