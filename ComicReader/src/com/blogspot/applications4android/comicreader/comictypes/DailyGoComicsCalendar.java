@@ -208,6 +208,7 @@ public class DailyGoComicsCalendar {
 	private int[] getValidDays(int year, int month) {
 		try {
 			String str = Downloader.downloadToString(new URI(mGcc.getCalendarJsUrl(year, month)));
+			Log.d("DGCC", str);
 			// no result :(
 			if((str == null) || (str.length() <= 1)) {
 				return null;
