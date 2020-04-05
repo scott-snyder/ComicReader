@@ -70,20 +70,14 @@ public class Downloader {
 	 * @throws ClientProtocolException 
 	 */
          public static String downloadToString(URI uri, String data) throws ClientProtocolException, URISyntaxException, IOException {
-           Log.d("Downloader", "downloadToString " + uri.toString() + " " + data);
                 BufferedReader br = openConnection(uri, data);
-                Log.d("Downloader", "downloadToString opened");
 		StringBuilder sb = new StringBuilder(SB_CAPACITY);
 		char[] buff = new char[SB_CAPACITY];
 		int len;
-                Log.d("Downloader", "downloadToString reading");
 	    while((len = br.read(buff)) > 0) {
 	    	sb.append(buff, 0, len);
 	    }
-            Log.d("Downloader", "downloadToString read");
 	    br.close();
-            Log.d("Downloader", "downloadToString got "+ sb.toString());
-            Log.d("Downloader", "downloadToString returning");
 	    return sb.toString();
 	}
 
@@ -117,24 +111,17 @@ public class Downloader {
 		InputStreamReader isr = new InputStreamReader(entity.getContent());
            */
            
-                Log.d("zzz-a", "start openConnection");
-                Log.d("zzz-a", uri.toString());
                 URL url = uri.toURL();
                 HttpURLConnection con = (HttpURLConnection)url.openConnection();
                 con.setInstanceFollowRedirects (true);
-                Log.d("zzz-b", "made con");
                 if (data.length() > 0) {
                   con.setRequestMethod("POST");
                   con.setDoOutput(true);
                   con.getOutputStream().write(data.getBytes("UTF-8"));
                 }
 		InputStreamReader isr = new InputStreamReader(con.getInputStream());
-                Log.d("zzz-c", "made isr");
-                Log.d("zzz-e", con.getResponseMessage());
-                Log.d("zzz-e", con.getURL().toString());
            
 		BufferedReader br = new BufferedReader(isr, DNLD_BUFF_SIZE);
-                Log.d("zzz-d", "openConnection returning");
 		return br;
 	}
 
