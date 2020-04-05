@@ -557,7 +557,7 @@ public abstract class Comic extends ComicParser {
 			mCurrent.setNext(getNextStripUrl());
 		}
 		String uid = mCurrent.uid();
-		Strip s = _querySetCurrentUid(mCurrent.getNext());
+		Strip s = _querySetCurrentUid(mCurrent.getNext());
 		s.setPrevious(uid);
 		return s;
 	}
