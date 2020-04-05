@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    18c5056873c34db6cc22c47c8a613bedf882dfb4
+Top:    54515d789e7b602f9a2b24ac06179a573d7923be
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -687,7 +687,7 @@ index 4a76ea9..dcf84cf 100644
  
  	/**
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
-index d4003c5..eddf1cf 100755
+index d4003c5..88fc9e7 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
 @@ -13,15 +13,20 @@ import org.apache.http.HttpEntity;
@@ -711,7 +711,7 @@ index d4003c5..eddf1cf 100755
  
  /**
   * Class containing utility functions for downloading the URI's
-@@ -50,14 +55,35 @@ public class Downloader {
+@@ -50,7 +55,22 @@ public class Downloader {
  	 * @throws ClientProtocolException 
  	 */
  	public static String downloadToString(URI uri) throws ClientProtocolException, URISyntaxException, IOException {
@@ -731,24 +731,11 @@ index d4003c5..eddf1cf 100755
 +	 * @throws ClientProtocolException 
 +	 */
 +         public static String downloadToString(URI uri, String data) throws ClientProtocolException, URISyntaxException, IOException {
-+           Log.d("Downloader", "downloadToString " + uri.toString() + " " + data);
 +                BufferedReader br = openConnection(uri, data);
-+                Log.d("Downloader", "downloadToString opened");
  		StringBuilder sb = new StringBuilder(SB_CAPACITY);
  		char[] buff = new char[SB_CAPACITY];
  		int len;
-+                Log.d("Downloader", "downloadToString reading");
- 	    while((len = br.read(buff)) > 0) {
- 	    	sb.append(buff, 0, len);
- 	    }
-+            Log.d("Downloader", "downloadToString read");
- 	    br.close();
-+            Log.d("Downloader", "downloadToString got "+ sb.toString());
-+            Log.d("Downloader", "downloadToString returning");
- 	    return sb.toString();
- 	}
- 
-@@ -70,12 +96,45 @@ public class Downloader {
+@@ -70,11 +90,37 @@ public class Downloader {
  	 * @throws ClientProtocolException 
  	 */
  	public static BufferedReader openConnection(URI uri) throws URISyntaxException, ClientProtocolException, IOException {
@@ -773,23 +760,16 @@ index d4003c5..eddf1cf 100755
  		InputStreamReader isr = new InputStreamReader(entity.getContent());
 +           */
 +           
-+                Log.d("zzz-a", "start openConnection");
-+                Log.d("zzz-a", uri.toString());
 +                URL url = uri.toURL();
 +                HttpURLConnection con = (HttpURLConnection)url.openConnection();
 +                con.setInstanceFollowRedirects (true);
-+                Log.d("zzz-b", "made con");
 +                if (data.length() > 0) {
 +                  con.setRequestMethod("POST");
 +                  con.setDoOutput(true);
 +                  con.getOutputStream().write(data.getBytes("UTF-8"));
 +                }
 +		InputStreamReader isr = new InputStreamReader(con.getInputStream());
-+                Log.d("zzz-c", "made isr");
-+                Log.d("zzz-e", con.getResponseMessage());
-+                Log.d("zzz-e", con.getURL().toString());
 +           
  		BufferedReader br = new BufferedReader(isr, DNLD_BUFF_SIZE);
-+                Log.d("zzz-d", "openConnection returning");
  		return br;
  	}
