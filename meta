@@ -1,15 +1,14 @@
 Version: 1
-Previous: d71593c5802ec102f4face3384acd1c115f70042
-Head: 2f061809cab9f9d194b24ae40676c42a0053afe4
+Previous: fb4823ecf2efe1f519a0bd76e0667c1115caf095
+Head: 90536fe16acdf807414ca473e65a84c3c82c5bbf
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
-  changes-to-get-ctrl-alt-del: 4a99d3e7c152b2b0de8273707ecd30e67701723c
-  panties: 488b645e9bcdb1881d09b0596fc5ab739838deff
-  AGirlandHerFed: 2dc36177634d505ddd31ec33686efbda064ae4a8
-  ASofterWorld: c2a51b7f0822ccd7f3658996ee9f1cc6a7192327
-  agent-x-wip: 3524ddc10082f0dfa0433537d61bb70f53dc7c79
-  gws: b76c492c60ab710160f636c9fd8327872efc545f
-  smbc: 77ffb479110f800d686212109b0b9129201fbb8b
-  refresh-temp: 2f061809cab9f9d194b24ae40676c42a0053afe4
+  changes-to-get-ctrl-alt-del: dc6669bd7b6976e1e3c00356a4da4c8d5acd8c57
+  panties: 985c5061ec413440ad0dcf191d7ba3b88bd82660
+  AGirlandHerFed: 3854378b8616a576e4240d36b59d1d08cc60dad8
+  ASofterWorld: 13a9cbd51c970e95c9dea296aaaf42e55685603c
+  agent-x-wip: c7a51c9e3ca5620e6e0c4714425e0ec7f2257a22
+  gws: 326d3d74144e09c7430b0281442994275e9dcea8
+  smbc: 90536fe16acdf807414ca473e65a84c3c82c5bbf
 Unapplied:
 Hidden:

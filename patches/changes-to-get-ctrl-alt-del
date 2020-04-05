@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    9aaba7cbab736b2a5c004b9732828d8710b8764b
+Top:    da08e11e3297a1909e99d2fe26b6b011464cae48
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:02:44 -0400
 
@@ -463,7 +463,7 @@ index 2577163..524b305 100755
 +        }
  }
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
-index 1a07cdb..4916950 100755
+index 1a07cdb..c93fd75 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
 @@ -9,6 +9,8 @@ import com.blogspot.applications4android.comicreader.comictypes.RandomIndexedCom
@@ -484,13 +484,7 @@ index 1a07cdb..4916950 100755
  					final_next = str;
  				}
  			}
-@@ -45,12 +47,13 @@ public class Cyanide extends RandomIndexedComic {
- 
- 	@Override
- 	protected int getPreviousStripId(BufferedReader br, String url) {
-+                Log.d(Cyanide, "In getPreviousStripId, url = "+url);
- 		int id = -1;
- 		try {
+@@ -50,7 +52,7 @@ public class Cyanide extends RandomIndexedComic {
  			String str;
  			String final_prev = null;
  			while ((str = br.readLine()) != null) {
@@ -499,7 +493,7 @@ index 1a07cdb..4916950 100755
  					final_prev = str;
  				}
  			}
-@@ -79,7 +82,7 @@ public class Cyanide extends RandomIndexedComic {
+@@ -79,7 +81,7 @@ public class Cyanide extends RandomIndexedComic {
  			throw e;
  		}
  		final_str = final_str.replaceAll(".*comics%2F","");
@@ -508,15 +502,7 @@ index 1a07cdb..4916950 100755
  		Log.d(Cyanide, "In parseForLatestId, final_str = "+final_str);
  		return Integer.parseInt(final_str);
  	}
-@@ -114,6 +117,7 @@ public class Cyanide extends RandomIndexedComic {
- 
- 	@Override
- 	protected String parse(String url, BufferedReader reader, Strip strip) throws IOException {
-+                Log.d(Cyanide, "parse " + url);
- 		boolean comic_found = true;
- 		String str;
- 		String final_str = null;
-@@ -133,10 +137,10 @@ public class Cyanide extends RandomIndexedComic {
+@@ -133,10 +135,10 @@ public class Cyanide extends RandomIndexedComic {
  			if(str.indexOf("\"og:url\"") != -1) {
  				final_title = str;
  			}
