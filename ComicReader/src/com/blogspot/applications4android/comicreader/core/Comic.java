@@ -550,14 +550,20 @@ public abstract class Comic extends ComicParser {
 	 * @return next strip
 	 */
 	public Strip getNextStrip() {
+          Log.d("zzz", "getNextStrip1");
 		if (isCurrentLatestStrip()) {
 			return mCurrent;
 		}
+          Log.d("zzz", "getNextStrip2");
 		if (!mCurrent.hasNext()) {
+                  Log.d("zzz", "getNextStrip3");
 			mCurrent.setNext(getNextStripUrl());
 		}
 		String uid = mCurrent.uid();
-		Strip s = _querySetCurrentUid(mCurrent.getNext());
+                Log.d("zzz", "getNextStrip4 " + uid);
+                String next = mCurrent.getNext();
+                Log.d("zzz", "getNextStrip5 " + next);
+		Strip s = _querySetCurrentUid(next);
 		s.setPrevious(uid);
 		return s;
 	}
