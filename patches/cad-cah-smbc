@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    bf20314bdfa8d25fee535f8235ac3e41aeb24f11
+Top:    18c5056873c34db6cc22c47c8a613bedf882dfb4
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -686,19 +686,6 @@ index 4a76ea9..dcf84cf 100644
  	}
  
  	/**
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
-index b4ee56f..fee9539 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Comic.java
-@@ -557,7 +557,7 @@ public abstract class Comic extends ComicParser {
- 			mCurrent.setNext(getNextStripUrl());
- 		}
- 		String uid = mCurrent.uid();
--		Strip s = _querySetCurrentUid(mCurrent.getNext());
-+		Strip s = _querySetCurrentUid(mCurrent.getNext());
- 		s.setPrevious(uid);
- 		return s;
- 	}
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
 index d4003c5..eddf1cf 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
