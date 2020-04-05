@@ -1,0 +1,21 @@
+Bottom: c6802b2b37175cafb44b7cbb55bfc7866dfc8f00
+Top:    99d82875244ebaf242476556720fffcfe7e81a24
+Author: scott snyder <sss@karma>
+Date:   2020-04-05 00:10:56 -0400
+
+Refresh of cad-cah-smbc
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
+index 682f141..6528b0e 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
+@@ -208,6 +208,7 @@ public class DailyGoComicsCalendar {
+ 	private int[] getValidDays(int year, int month) {
+ 		try {
+ 			String str = Downloader.downloadToString(new URI(mGcc.getCalendarJsUrl(year, month)));
++			Log.d("DGCC", str);
+ 			// no result :(
+ 			if((str == null) || (str.length() <= 1)) {
+ 				return null;
