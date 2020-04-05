@@ -5,6 +5,9 @@ Date:   2020-04-05 00:05:51 -0400
 
 Changes to get ctrl-alt-del, cyanide&happiness, and SMBC working again.
 
+Also https fixes for gocomics.
+
+
 ---
 
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
