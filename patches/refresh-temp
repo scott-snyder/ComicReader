@@ -1,0 +1,40 @@
+Bottom: 811731c5a641c9dc9a0a07eef357d72edf84ca1e
+Top:    9312fb88fd80d3da765720948039bba6fca8caf9
+Author: scott snyder <sss@karma>
+Date:   2020-04-05 00:01:44 -0400
+
+Refresh of changes-to-get-ctrl-alt-del
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
+index 86d5769..524b305 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
+@@ -308,18 +308,15 @@ public class CtrlAltDel extends DailyComic {
+ 
+         protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
+         {
+-            Log.d ("zzz", "getUrlsForMonth1 " + month);
+             getMonths();
+             TreeMap<Integer, CADStrip> l = mMonths.get (month);
+             try {
+               if (l == null) {
+                 if (mMonths.containsKey (month)) {
+-                  Log.d ("zzz", "getUrlsForMonth2");
+                   l = new TreeMap<Integer, CADStrip>();
+                   URI uri = new URI("https://cad-comic.com/wp-admin/admin-ajax.php");
+                   String data = "action=custom_cat_search&post_cat=all&post_month="+month;
+                   String sdata = Downloader.downloadToString(uri, data);
+-                  Log.d ("zzz", "getUrlsForMonth3 " + sdata);
+                   JSONObject root = new JSONObject(sdata);
+                   JSONArray posts = root.getJSONArray("posts");
+                   List<String> ret = new ArrayList<String>();
+@@ -328,7 +325,6 @@ public class CtrlAltDel extends DailyComic {
+                     String url = o.getString("comic");
+                     if (url.lastIndexOf("KDM") >= 0) continue;
+                     Calendar c = getTimeFromUrl (url);
+-                    Log.d ("zzz", "getUrlsForMonth4 " + url + " " + c);
+                     if (!month.equals (monthKey (c))) {
+                       continue;
+                     }
