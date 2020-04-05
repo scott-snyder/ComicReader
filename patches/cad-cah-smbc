@@ -1,5 +1,5 @@
 Bottom: c81fcb265432ca5826a4e3431824c3c9c5b5486a
-Top:    efa1ae07b8dcbf227d2be9e117188162ace7a972
+Top:    f80dd6c32422137b8d64898af16152f968e42271
 Author: scott snyder <sss@karma>
 Date:   2020-04-05 00:05:51 -0400
 
@@ -647,7 +647,7 @@ index be31ea7..0e855a7 100644
  //Log.d("SMBC", "image_url " + image_url);
  		final_title = final_str.replaceAll(".*title=\"","");
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
-index 43a7672..5a38db5 100755
+index 43a7672..fd359bb 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
 +++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyComic.java
 @@ -9,6 +9,7 @@ import com.blogspot.applications4android.comicreader.core.Bound;
@@ -658,26 +658,6 @@ index 43a7672..5a38db5 100755
  
  /**
   * This class is useful for all those comics which are released daily and are indexed
-@@ -47,7 +48,10 @@ public abstract class DailyComic extends Comic {
- 	 */
- 	public Calendar getCurrentCal() {
- 		Strip s = getCurrentStrip();
--		return getTimeFromUrl(s.uid());
-+          Log.d("zzz", "getCurrentCal " + s.uid() + " " +  s.getTitle());
-+		Calendar c = getTimeFromUrl(s.uid());
-+                Log.d("zzz", "getCurrentCal2" + c);
-+                return c;
- 	}
- 
- 	@Override
-@@ -84,6 +88,7 @@ public abstract class DailyComic extends Comic {
- 
- 	@Override
- 	protected String getNextStripUrl() {
-+          Log.d("zzz", "getNextStripUrl");
- 		Calendar cal = getCurrentCal();
- 		cal.add(Calendar.DAY_OF_MONTH, 1);
- 		addException(cal, 1);
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
 index 6528b0e..03e033e 100755
 --- a/ComicReader/src/com/blogspot/applications4android/comicreader/comictypes/DailyGoComicsCalendar.java
