@@ -1,0 +1,58 @@
+Bottom: 19546d8c1eb37c2afcf72db3c3a45dee74f534bf
+Top:    7471bff1d1544ff497836c085bcfc0e976f7f33b
+Author: scott snyder <sss@karma>
+Date:   2020-04-05 00:16:25 -0400
+
+Refresh of cad-cah-smbc
+
+---
+
+diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
+index eddf1cf..88fc9e7 100755
+--- a/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
++++ b/ComicReader/src/com/blogspot/applications4android/comicreader/core/Downloader.java
+@@ -70,20 +70,14 @@ public class Downloader {
+ 	 * @throws ClientProtocolException 
+ 	 */
+          public static String downloadToString(URI uri, String data) throws ClientProtocolException, URISyntaxException, IOException {
+-           Log.d("Downloader", "downloadToString " + uri.toString() + " " + data);
+                 BufferedReader br = openConnection(uri, data);
+-                Log.d("Downloader", "downloadToString opened");
+ 		StringBuilder sb = new StringBuilder(SB_CAPACITY);
+ 		char[] buff = new char[SB_CAPACITY];
+ 		int len;
+-                Log.d("Downloader", "downloadToString reading");
+ 	    while((len = br.read(buff)) > 0) {
+ 	    	sb.append(buff, 0, len);
+ 	    }
+-            Log.d("Downloader", "downloadToString read");
+ 	    br.close();
+-            Log.d("Downloader", "downloadToString got "+ sb.toString());
+-            Log.d("Downloader", "downloadToString returning");
+ 	    return sb.toString();
+ 	}
+ 
+@@ -117,24 +111,17 @@ public class Downloader {
+ 		InputStreamReader isr = new InputStreamReader(entity.getContent());
+            */
+            
+-                Log.d("zzz-a", "start openConnection");
+-                Log.d("zzz-a", uri.toString());
+                 URL url = uri.toURL();
+                 HttpURLConnection con = (HttpURLConnection)url.openConnection();
+                 con.setInstanceFollowRedirects (true);
+-                Log.d("zzz-b", "made con");
+                 if (data.length() > 0) {
+                   con.setRequestMethod("POST");
+                   con.setDoOutput(true);
+                   con.getOutputStream().write(data.getBytes("UTF-8"));
+                 }
+ 		InputStreamReader isr = new InputStreamReader(con.getInputStream());
+-                Log.d("zzz-c", "made isr");
+-                Log.d("zzz-e", con.getResponseMessage());
+-                Log.d("zzz-e", con.getURL().toString());
+            
+ 		BufferedReader br = new BufferedReader(isr, DNLD_BUFF_SIZE);
+-                Log.d("zzz-d", "openConnection returning");
+ 		return br;
+ 	}
