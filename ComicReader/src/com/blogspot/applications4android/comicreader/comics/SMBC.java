@@ -49,22 +49,18 @@ public class SMBC extends IndexedComic {
 	@Override
 	protected int parseForLatestId(BufferedReader reader) throws IOException, ComicLatestException {
           String permalink = getPermalinkFromReader (reader);
-          Log.d("SMBC", "test0 permalink " + permalink);
           int lo = 5000;
           int hi = 5500;
           String lhi = getPermalinkForId(hi);
-          Log.d("SMBC", "test1 lhi " + hi + " " + lhi);
 
           while (!lhi.equals (permalink)) {
             hi = (hi-lo)*2 + lo;
             lhi = getPermalinkForId(hi);
-            Log.d("SMBC", "test1a lhi " + hi + " " + lhi);
           }
 
           while (true) {
             int mid = (lo+hi)/2;
             String lmid = getPermalinkForId(mid);
-            Log.d("SMBC", "test2 " + mid + " " + lmid);
             if (lmid.equals (permalink)) {
               hi = mid;
             }
