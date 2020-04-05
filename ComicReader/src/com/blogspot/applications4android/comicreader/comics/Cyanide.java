@@ -47,7 +47,6 @@ public class Cyanide extends RandomIndexedComic {
 
 	@Override
 	protected int getPreviousStripId(BufferedReader br, String url) {
-                Log.d(Cyanide, "In getPreviousStripId, url = "+url);
 		int id = -1;
 		try {
 			String str;
@@ -117,7 +116,6 @@ public class Cyanide extends RandomIndexedComic {
 
 	@Override
 	protected String parse(String url, BufferedReader reader, Strip strip) throws IOException {
-                Log.d(Cyanide, "parse " + url);
 		boolean comic_found = true;
 		String str;
 		String final_str = null;
