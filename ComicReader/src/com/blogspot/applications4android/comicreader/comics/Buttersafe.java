@@ -12,7 +12,7 @@ public class Buttersafe extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.buttersafe.com";
+		return "https://www.buttersafe.com";
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class Buttersafe extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.buttersafe.com/archive/";
+		return "https://www.buttersafe.com/archive/";
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class Buttersafe extends ArchivedComic {
 		String final_str = null;
 		String final_title = null;
 		while((str = reader.readLine()) != null) {
-			int index1 = str.indexOf("http://buttersafe.com/comics/");
+			int index1 = str.indexOf("https://www.buttersafe.com/comics/");
 			if (index1 != -1) {
 				final_str = str;
 				final_title = str;
@@ -59,7 +59,7 @@ public class Buttersafe extends ArchivedComic {
 		}
 		final_str = final_str.replaceAll(".*img src=\"","");
 		final_str = final_str.replaceAll("\".*","");
-		final_title = final_title.replaceAll(".*http://buttersafe.com/comics/", "");
+		final_title = final_title.replaceAll(".*https://buttersafe.com/comics/", "");
 		final_title = final_title.replaceAll("\".*", "");
 		final_title = "Buttersafe: " + final_title.substring(11, final_title.length());
 		final_title = final_title.replaceAll(".jpg", "");
