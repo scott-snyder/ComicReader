@@ -12,12 +12,12 @@ public class Bunbuns extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.illumatie.nl/bunbuns/viewer.php";
+		return "https://www.illumatie.nl/bunbuns/viewer.php";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.illumatie.nl/bunbuns/viewer.php";
+		return "https://www.illumatie.nl/bunbuns/viewer.php";
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class Bunbuns extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.illumatie.nl/bunbuns/viewer.php?nr=" + String.format("%03d", num);
+		return "https://www.illumatie.nl/bunbuns/viewer.php?nr=" + String.format("%03d", num);
 	}
 
 	@Override
@@ -60,10 +60,10 @@ public class Bunbuns extends IndexedComic {
 	@Override
 	protected String parse(String url, BufferedReader reader, Strip strip) throws IOException {
 		String url_str = url;
-		int currId = Integer.parseInt(url_str.replaceAll("http://www.illumatie.nl/bunbuns/viewer.php\\?nr=", ""));
+		int currId = Integer.parseInt(url_str.replaceAll("https://www.illumatie.nl/bunbuns/viewer.php\\?nr=", ""));
 		strip.setTitle("Bunbun: " + String.format("%03d", currId));
 		strip.setText(" -NA- ");
-		return "http://www.illumatie.nl/bunbuns/pic/images/comics/bunbun-comic"+
-				String.format("%03d", currId) + ".gif";
+		return "https://www.illumatie.nl/bunbuns/pic/images/comics/bunbun-comic"+
+				String.format("%03d", currId) + ".jpg";
 	}
 }
