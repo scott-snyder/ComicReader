@@ -1,6 +1,6 @@
 Version: 1
-Previous: e64f1ba6a586bb4b62ab58b1131a1883843ac9ee
-Head: 0c9c02b61760fd0bc40746064c3f9e7d0ed8a0ab
+Previous: e537cf9bfec009f19ab614fea6e0620bd4fa4186
+Head: 38e6795652efaac6acd58e5eed4b3995ff0d9612
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
   cad-cah-smbc: 2c6645e71c4821d8d63810ec7836c5c27da15fce
@@ -9,7 +9,6 @@ Applied:
   ASofterWorld: d6a0fc24d8c23514417455ee38bb85c9e36888fb
   agent-x-wip: b963829b3e2f9324decd9b4529fa0a2597d06872
   gws: 069bb6419b5d7540303ec27c4c7769d6c68b3410
-  bug: 953b7fa369ed1e72ceba454ae77d55655a5435e3
-  refresh-temp: 0c9c02b61760fd0bc40746064c3f9e7d0ed8a0ab
+  bug: 38e6795652efaac6acd58e5eed4b3995ff0d9612
 Unapplied:
 Hidden:
