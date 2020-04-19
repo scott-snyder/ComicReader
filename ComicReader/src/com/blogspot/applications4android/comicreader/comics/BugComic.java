@@ -18,7 +18,7 @@ public class BugComic extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.bugcomic.com/";
+		return "https://www.bugcomic.com/";
 	}
 
 	@Override
@@ -28,15 +28,18 @@ public class BugComic extends ArchivedComic {
 		String str,str_temp;
 		int i;
 		while((str = reader.readLine()) != null) {
-			i = str.indexOf("class=\"archive-title\"");
-			if (i != -1) {
-				str_temp = str;
-				str_temp=str_temp.replaceAll(".*href=\"","");
-				str_temp=str_temp.replaceAll("\".*","");
-				m_com.add(str_temp);
-				idx++;
-			}
-		}
+                  if (str.indexOf("class=\"year-title\"") != -1) {
+                    i = 0;
+                    int j;
+                    while ((j = str.indexOf("a href=\"", i)) != -1) {
+                      j += 8;
+                      i = str.indexOf ("\"", j);
+                      if (i == -1) break;
+                      m_com.add (str.substring (j, i));
+                      ++idx;
+                    }
+                  }
+                }
 		String []m_com_urls = new String[idx];
 		m_com.toArray(m_com_urls);
 	    int left, right;
@@ -73,7 +76,7 @@ public class BugComic extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.bugcomic.com/archives/";
+		return "https://www.bugcomic.com/archives/";
 	}
 
 	@Override
@@ -114,18 +117,23 @@ public class BugComic extends ArchivedComic {
 		String str;
 		String final_str = null;
 		String final_title = null;
+                boolean next = false;
 		while((str = reader.readLine()) != null) {
-			int index1 = str.indexOf("class=\"comicpane\"");
+			int index1 = str.indexOf("div id=\"comic\"");
 			if (index1 != -1) {
-				final_str = str;
-				final_title = str;
-			}
+                          next = true;
+                        }
+                        else if (next) {
+                          final_str = str;
+                          final_title = str;
+                          next = false;
+                        }
 		}
 		final_str = final_str.replaceAll(".*src=\"","");
 		final_str = final_str.replaceAll("\".*","");
 		final_title = final_title.replaceAll(".*title=\"","");
 		final_title = final_title.replaceAll("\".*","");
-		strip.setTitle("Bug Comic: "+final_title); 
+		strip.setTitle("Bug Martini: "+final_title); 
 		strip.setText("-NA-");
 	    return final_str;
 	}
