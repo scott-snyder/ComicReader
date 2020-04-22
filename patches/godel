@@ -1,10 +1,9 @@
 Bottom: fb5d321b925392980f5d2671de1221db8f2f9446
-Top:    1dee34cf2ff22055c37e30c6192cbcb0b53f04c0
+Top:    42f51fa788dbddca2bd9fec1528daedc98ff093a
 Author: scott snyder <sss@karma>
 Date:   2020-04-21 23:00:55 -0400
 
 Remove references to GoComics strips that no longer exist.
-
 
 ---
 
@@ -213,18 +212,6 @@ index 91a6049..dc810eb 100644
      {"class":"GoComics.MattWuerker", "name":"Editorial : Matt Wuerker", "pref":"mattwuerkerPref"}
    ]
  }
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-index 524b305..ee73ec2 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/CtrlAltDel.java
-@@ -89,6 +89,7 @@ public class CtrlAltDel extends DailyComic {
-   
-         protected Calendar getTimeFromUrl(String url)
-         {
-+          Log.d ("zzz", url);
-           int i = url.lastIndexOf ("ENG_");
-           if (i >= 0) {
-             i += 4;
 diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BenSargent.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BenSargent.java
 deleted file mode 100755
 index 378ea09..0000000
