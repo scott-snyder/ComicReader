@@ -89,6 +89,7 @@ public class CtrlAltDel extends DailyComic {
   
         protected Calendar getTimeFromUrl(String url)
         {
+          Log.d ("zzz", url);
           int i = url.lastIndexOf ("ENG_");
           if (i >= 0) {
             i += 4;
