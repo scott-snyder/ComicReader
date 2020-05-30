@@ -1,6 +1,6 @@
 Version: 1
-Previous: cd8cbfedd62b871e2d2558ff33073ae4580536cd
-Head: 5688549ec0e12ec677cb98533fb88180765ee83c
+Previous: 7daff1672abacbbbe2d3166073667724e317dbea
+Head: c26d25c54e100237134fd240cf4b7892a90e01df
 Applied:
   target: c9e3f879980c3b9f42102b0a4cddbfe565a9c2f8
   cad-cah-smbc: 2c6645e71c4821d8d63810ec7836c5c27da15fce
@@ -13,7 +13,6 @@ Applied:
   bunbuns: a24002f256b127f209e12e40a0edb41a356db3b2
   buttersafe: 474485674da4243804919be7c4fb28e15a10d2d8
   godel: c0a7cd8fd6e2e0e1711b666938d498caaf64bdd4
-  cad: 11d9b575061a5fad7a29fc7bfecae90b04197f1c
-  refresh-temp: 5688549ec0e12ec677cb98533fb88180765ee83c
+  cad: c26d25c54e100237134fd240cf4b7892a90e01df
 Unapplied:
 Hidden:
