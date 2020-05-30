@@ -76,6 +76,7 @@ public class CtrlAltDel extends DailyComic {
         {
           getMonths();
           String month = mMonths.lastKey();
+          Log.d ("CAD", "month " + month);
           if (month == null) return null;
           SortedMap<Integer, CADStrip> dlist = getUrlsForMonth (month);
           int d = dlist.lastKey();
@@ -88,6 +89,18 @@ public class CtrlAltDel extends DailyComic {
 
   
         protected Calendar getTimeFromUrl(String url)
+        {
+          Calendar c = getTimeFromUrl (url, 0);
+          if (c != null) {
+            return c;
+          }
+          CADStrip s = getCADStripFromUrl (url);
+          if (s != null) {
+            return s.mCal;
+          }
+          return null;
+        }
+        protected Calendar getTimeFromUrl(String url, int next)
         {
           int i = url.lastIndexOf ("ENG_");
           if (i >= 0) {
@@ -107,9 +120,62 @@ public class CtrlAltDel extends DailyComic {
                 i = url.lastIndexOf ("Strip");
                 if (i >= 0) {
                   i += 5;
+                  int j = url.lastIndexOf ("_");
+                  if (j >= 0 && j > i) {
+                    //https://cad-comic.com/wp-content/uploads/2020/05/StripXX88_2020515a.x44380.png
+                    i = j+1;
+                    if (url.substring(i+7,i+8).equals ("a")) {
+                      int y = Integer.parseInt (url.substring (i,   i+4));
+                      int m = Integer.parseInt (url.substring (i+4, i+5));
+                      int d = Integer.parseInt (url.substring (i+5, i+7));
+                      Calendar c = Calendar.getInstance();
+                      c.set (y, m-1, d);
+                      return c;
+                    }
+                  }
+                  else if (url.substring(i+8,i+9).equals("a")) {
+                    // https://cad-comic.com/wp-content/uploads/2021/01/Strip20210201aa.png
+                      int y = Integer.parseInt (url.substring (i,   i+4));
+                      int m = Integer.parseInt (url.substring (i+4, i+6));
+                      int d = Integer.parseInt (url.substring (i+6, i+8));
+                      Calendar c = Calendar.getInstance();
+                      c.set (y, m-1, d);
+                      return c;
+                  }
+                  else {
+                    int y = Integer.parseInt (url.substring (i,   i+4));
+                    int m = Integer.parseInt (url.substring (i+4, i+5) + url.substring (i+6, i+7));
+                    int d = Integer.parseInt (url.substring (i+7, i+9));
+                    Calendar c = Calendar.getInstance();
+                    c.set (y, m-1, d);
+                    return c;
+                  }
                 }
                 else {
-                  return null;
+                  //https://cad-comic.com/wp-content/uploads/2020/04/SC07_17.x44380.png
+                  i = url.lastIndexOf ("/SC");
+                  if (i >= 0) {
+                    if (next == 0) return null;
+                    int y = Integer.parseInt (url.substring (i-7,   i-3));
+                    int m = Integer.parseInt (url.substring (i-2,   i));
+                    int d = next;
+                    Calendar c = Calendar.getInstance();
+                    c.set (y, m-1, d);
+                    return c;
+                  }
+                  else {
+                    //https://cad-comic.com/wp-content/uploads/2017/03/cad-20021023-87d52.jpg
+                    i = url.lastIndexOf ("/cad-");
+                    if (i >= 0) {
+                      int y = Integer.parseInt (url.substring (i+5,   i+9));
+                      int m = Integer.parseInt (url.substring (i+9,   i+11));
+                      int d = Integer.parseInt (url.substring (i+11,  i+13));
+                      Calendar c = Calendar.getInstance();
+                      c.set (y, m-1, d);
+                      return c;
+                    }
+                    return null;
+                  }
                 }
               }
             }
@@ -120,37 +186,6 @@ public class CtrlAltDel extends DailyComic {
           Calendar c = Calendar.getInstance();
           c.set (y, m-1, d);
           return c;
-        }
-
-
-        private Calendar guessTimeFromUrl(String url)
-        {
-           // https://..../ENG_201811121.png
-           int i = url.lastIndexOf ("ENG_");
-           if (i >= 0) {
-             i += 4;
-           }
-           else {
-             i = url.lastIndexOf ("sillies-");
-             if (i >= 0) {
-               i += 8;
-             }
-             else {
-               i = url.lastIndexOf ("cad-");
-               if (i >= 0) {
-                 i += 4;
-               }
-               else {
-                 return null;
-               }
-             }
-           }
-           int y = Integer.parseInt (url.substring (i,   i+4));
-           int m = Integer.parseInt (url.substring (i+4, i+6));
-           int d = Integer.parseInt (url.substring (i+6, i+8));
-           Calendar c = Calendar.getInstance();
-           c.set (y, m-1, d);
-           return c;
         }
 
 
@@ -263,8 +298,20 @@ public class CtrlAltDel extends DailyComic {
 
         protected CADStrip getCADStripFromUrl(String url)
         {
-          Calendar c = getTimeFromUrl (url);
-          return getStripFromTime (c);
+          Calendar c = getTimeFromUrl (url, 0);
+          if (c != null) {
+            return getStripFromTime (c);
+          }
+          //https://cad-comic.com/wp-content/uploads/2020/04/SC07_17.x44380.png
+          int i = url.lastIndexOf ("/SC");
+          if (i >= 0) {
+            String yyyymm = url.substring (i-7,   i-3) + url.substring (i-2,   i);
+            SortedMap<Integer, CADStrip> map = getUrlsForMonth (yyyymm);
+            for (CADStrip s : map.values()) {
+              if (s.mUrl.equals (url)) return s;
+            }
+          }
+          return null;
         }
 
 
@@ -308,6 +355,7 @@ public class CtrlAltDel extends DailyComic {
 
         protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
         {
+          Log.d ("CAD", "getUrlsFroMonth " + month);
             getMonths();
             TreeMap<Integer, CADStrip> l = mMonths.get (month);
             try {
@@ -317,18 +365,23 @@ public class CtrlAltDel extends DailyComic {
                   URI uri = new URI("https://cad-comic.com/wp-admin/admin-ajax.php");
                   String data = "action=custom_cat_search&post_cat=all&post_month="+month;
                   String sdata = Downloader.downloadToString(uri, data);
+                  Log.d ("CAD", "  sdata " + sdata);
                   JSONObject root = new JSONObject(sdata);
                   JSONArray posts = root.getJSONArray("posts");
                   List<String> ret = new ArrayList<String>();
-                  for (int i = 0; i < posts.length(); i++) {
+                  int next = 1;
+                  for (int i = posts.length()-1; i >= 0; i--) {
                     JSONObject o = posts.getJSONObject(i);
                     String url = o.getString("comic");
+                    Log.d ("CAD", "  got " + url);
                     if (url.lastIndexOf("KDM") >= 0) continue;
-                    Calendar c = getTimeFromUrl (url);
+                    Calendar c = getTimeFromUrl (url, next);
+                    Log.d ("CAD", "     month " + monthKey(c));
                     if (!month.equals (monthKey (c))) {
                       continue;
                     }
                     int dom = c.get (Calendar.DAY_OF_MONTH);
+                    next = dom+1;
                     CADStrip strip = new CADStrip (url, o.getString("title"), o.getString("date"), c);
                     l.put (dom, strip);
                   }
