@@ -148,6 +148,7 @@ public class Cyanide extends RandomIndexedComic {
 		Log.d(Cyanide, "In parse, final_prev = "+final_prev);		
 		final_str = final_str.replaceAll(".*og:image\" content=\"","");
 		final_str = final_str.replaceAll("\".*","");
+		final_str = final_str.replaceAll(" ","%20");
 		final_title = final_title.replaceAll(".*net/comics/","");
 		final_title = final_title.replaceAll("/\".*","");
 		strip.setTitle(final_title);
