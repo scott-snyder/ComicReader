@@ -22,7 +22,7 @@ public class Cyanide extends RandomIndexedComic {
 
 	@Override
 	protected String getRandUrl() {
-		return "http://www.explosm.net/comics/random/";
+		return "https://www.explosm.net/comics/random/";
 	}
 
 	@Override
@@ -89,24 +89,24 @@ public class Cyanide extends RandomIndexedComic {
 	@Override
 	public String getStripUrlFromId(int num) {
 		Log.d(Cyanide, "In getStripUrlFromId, num = "+num);
-		return "http://www.explosm.net/comics/" + num;
+		return "https://www.explosm.net/comics/" + num;
 	}
 
 	@Override
 	protected int getIdFromStripUrl(String url) {
-		String str = url.replaceAll("http://www.explosm.net/comics/", "");
+		String str = url.replaceAll("https://www.explosm.net/comics/", "");
 		Log.d(Cyanide, "In getIdFromStripUrl, str = "+str);
 		return Integer.parseInt(str);
 	}
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://explosm.net/comics/latest/";
+		return "https://explosm.net/comics/latest/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://explosm.net";
+		return "https://explosm.net";
 	}
 
 	@Override
@@ -148,6 +148,7 @@ public class Cyanide extends RandomIndexedComic {
 		Log.d(Cyanide, "In parse, final_prev = "+final_prev);		
 		final_str = final_str.replaceAll(".*og:image\" content=\"","");
 		final_str = final_str.replaceAll("\".*","");
+		final_str = final_str.replaceAll(" ","%20");
 		final_title = final_title.replaceAll(".*net/comics/","");
 		final_title = final_title.replaceAll("/\".*","");
 		strip.setTitle(final_title);
