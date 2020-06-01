@@ -1,0 +1,12 @@
+Bottom: a883fc34b9c2c40f9824baf42576ddcb00500ed7
+Top:    a883fc34b9c2c40f9824baf42576ddcb00500ed7
+Author: scott snyder <sss@karma>
+Date:   2020-06-01 00:12:07 -0400
+
+Cyanide & Happiness: Fix for spaces in url (such as in 5572).
+
+
+
+---
+
+
