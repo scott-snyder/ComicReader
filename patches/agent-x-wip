@@ -1,5 +1,5 @@
-Bottom: a6f391e1b38e3f362c5e094acf45970bab5be137
-Top:    79045efcd6fc373cbe95de0a7aa51688e8d4ee26
+Bottom: 75ea2eefd7d918f230f1a2bce2841710ff69ddaf
+Top:    2bc49fc75715dff04ff41c9a17c29cab8690be41
 Author: scott snyder <sss@karma>
 Date:   2019-12-30 22:03:27 -0500
 
@@ -9,38 +9,5 @@ agent x: missing a way to get urls of all strips.
 
 ---
 
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AgentXComics.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AgentXComics.java
-index ea65884..4416416 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AgentXComics.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/AgentXComics.java
-@@ -12,7 +12,7 @@ public class AgentXComics extends ArchivedComic {
- 
- 	@Override
- 	public String getComicWebPageUrl() {
--		return "http://www.agent-x.com.au/";
-+		return "https://www.agent-x.com.au/";
- 	}
- 
- 	@Override
-@@ -52,7 +52,7 @@ public class AgentXComics extends ArchivedComic {
- 
- 	@Override
- 	protected String getArchiveUrl() {
--		return "http://www.agent-x.com.au/";
-+		return "https://www.agent-x.com.au/";
- 	}
- 
- 	@Override
-@@ -64,10 +64,10 @@ public class AgentXComics extends ArchivedComic {
- 	protected String parse(String url, BufferedReader reader, Strip strip) throws IOException  {
- 		String str;
- 		String final_str = null;
--		String final_title = url.replaceAll("http.*au/comic/", "");
-+		String final_title = url.replaceAll("https.*au/comic/", "");
- 		final_title = "AgentX: " + final_title.replaceAll("/", "");
- 		while((str = reader.readLine()) != null) {
--			int index1 = str.indexOf("webcomic-object-full");
-+			int index1 = str.indexOf("current-webcomic");
- 			if (index1 != -1) {
- 				final_str = str;
- 			}
+.../applications4android/comicreader/comics/AgentXComics.java     | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)

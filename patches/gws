@@ -1,5 +1,5 @@
-Bottom: 79045efcd6fc373cbe95de0a7aa51688e8d4ee26
-Top:    7471bff1d1544ff497836c085bcfc0e976f7f33b
+Bottom: 2bc49fc75715dff04ff41c9a17c29cab8690be41
+Top:    e796f0a1e28e7ed9516dfadfb82ffe28d20d21dd
 Author: scott snyder <sss@karma>
 Date:   2020-02-22 23:57:45 -0500
 
@@ -11,40 +11,5 @@ Switched to https; another block of missing IDs.
 
 ---
 
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
-index b94476e..f036506 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/GirlswithSlingshots.java
-@@ -31,11 +31,11 @@ public class GirlswithSlingshots extends IndexedComic {
- 
- 	@Override
- 	protected String getFrontPageUrl() {
--		return "http://www.girlswithslingshots.com/";
-+		return "https://www.girlswithslingshots.com/";
- 	}
- 
- 	public String getComicWebPageUrl() {
--		return "http://www.girlswithslingshots.com/";
-+		return "https://www.girlswithslingshots.com/";
- 	}
- 
- 	@Override
-@@ -64,7 +64,8 @@ public class GirlswithSlingshots extends IndexedComic {
- 	@Override
- 	public int addException(int id, int increment) {
- 		while(true) {
--			if(!mHash.containsKey(id)) {
-+			if(!mHash.containsKey(id))
-+                        {
- 				break;
- 			}
- 			id += increment;
-@@ -75,7 +76,7 @@ public class GirlswithSlingshots extends IndexedComic {
- 	@Override
- 	public String getStripUrlFromId(int num) {
- //Log.d("GWS", "num " + num);
--		return "http://www.girlswithslingshots.com/comic/gws-chaser-" + num;
-+		return "https://www.girlswithslingshots.com/comic/gws-chaser-" + num;
- 	}
- 
- 	@Override
+.../comicreader/comics/GirlswithSlingshots.java                  | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)

@@ -1,5 +1,5 @@
-Bottom: 36b4a4c70e6c5d7dc831419fa429621a668398d3
-Top:    a6f391e1b38e3f362c5e094acf45970bab5be137
+Bottom: 2120f9f2719d0fddb33ba5b8b1bc9d49cfc017bd
+Top:    75ea2eefd7d918f230f1a2bce2841710ff69ddaf
 Author: scott snyder <sss@karma>
 Date:   2019-12-29 21:22:24 -0500
 
@@ -9,54 +9,5 @@ Fix a softer world
 
 ---
 
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/ASofterWorld.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/ASofterWorld.java
-index e67255f..b00c936 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/ASofterWorld.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/ASofterWorld.java
-@@ -21,6 +21,7 @@ public class ASofterWorld extends IndexedComic {
- 
- 	@Override
- 	protected int parseForLatestId(BufferedReader reader) throws IOException, ComicLatestException {
-+          /*
- 		String str;
- 		String final_str = null;
- 		while((str = reader.readLine()) != null) {
-@@ -37,6 +38,8 @@ public class ASofterWorld extends IndexedComic {
-     	final_str = final_str.replaceAll(".*World: ","");
-     	final_str = final_str.replaceAll("</title>.*","");
- 	    return Integer.parseInt(final_str);
-+          */
-+          return 1248;
- 	}
- 
- 	@Override
-@@ -66,26 +69,18 @@ public class ASofterWorld extends IndexedComic {
-     	String str;
- 		String final_str = null;
- 		String final_title = null;
--		String final_itext = null;
- 		while ((str = reader.readLine()) != null) {
--			int index1 = str.indexOf("onclick=\"makeAlert");
-+			int index1 = str.indexOf("title=");
- 			if (index1 != -1) {
- 				final_str = str;
--				final_itext = str;
--			}
--			int index3 = str.indexOf("<title>");
--			if (index3 != -1) {
- 				final_title = str;
- 			}
- 		}
- 		final_str = final_str.replaceAll(".*src=\"","");
- 		final_str = final_str.replaceAll("\".*","");
--    	final_title = final_title.replaceAll(".*<title>","");
--    	final_title = final_title.replaceAll("</title>.*","");
--		final_itext = final_itext.replaceAll(".*title=\"","");
--		final_itext = final_itext.replaceAll("\".*","");
-+		final_title = final_title.replaceAll(".*title=\"","");
-+		final_title = final_title.replaceAll("\".*","");
- 		strip.setTitle(final_title);
--		strip.setText(final_itext);
- 		if(!final_str.startsWith("http://www.asofterworld.com")) {
- 			return "http://www.asofterworld.com/"+final_str;
- 		}
+.../comicreader/comics/ASofterWorld.java                | 17 ++++++-----------
+ 1 file changed, 6 insertions(+), 11 deletions(-)

@@ -1,5 +1,5 @@
-Bottom: 7471bff1d1544ff497836c085bcfc0e976f7f33b
-Top:    270cde2947fffabd539b7d52e9aaba1d152aba56
+Bottom: e796f0a1e28e7ed9516dfadfb82ffe28d20d21dd
+Top:    6e628db32a5ad4926a0abf000c6784f1693a1556
 Author: scott snyder <sss@karma>
 Date:   2020-04-18 23:24:08 -0400
 
@@ -10,95 +10,6 @@ current web site.
 
 ---
 
-diff --git a/ComicReader/assets/classes.json b/ComicReader/assets/classes.json
-index dbfcfa5..91a6049 100644
---- a/ComicReader/assets/classes.json
-+++ b/ComicReader/assets/classes.json
-@@ -6,7 +6,7 @@
-     {"class":"ASofterWorld", "name":"A Softer World", "pref":"asofterworldPref"},
-     {"class":"AmazingSuperpowers", "name":"Amazing Superpowers", "pref":"amazingsuperpowersPref"},
-     {"class":"Bizarro", "name":"Bizarro", "pref":"bizarroPref"},
--    {"class":"BugComic", "name":"Bug Comic", "pref":"bugcomicPref"},
-+    {"class":"BugComic", "name":"Bug Martini", "pref":"bugcomicPref"},
-     {"class":"Bunbuns", "name":"Bunbuns", "pref":"bunbunPref"},
-     {"class":"Buttersafe", "name":"Buttersafe", "pref":"buttersafePref"},
-     {"class":"CalamitiesOfNature", "name":"Calamities Of Nature", "pref":"calamitiesofnaturePref"},
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/BugComic.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/BugComic.java
-index 9ce43d6..e76c23c 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/BugComic.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/BugComic.java
-@@ -18,7 +18,7 @@ public class BugComic extends ArchivedComic {
- 
- 	@Override
- 	public String getComicWebPageUrl() {
--		return "http://www.bugcomic.com/";
-+		return "https://www.bugcomic.com/";
- 	}
- 
- 	@Override
-@@ -28,15 +28,18 @@ public class BugComic extends ArchivedComic {
- 		String str,str_temp;
- 		int i;
- 		while((str = reader.readLine()) != null) {
--			i = str.indexOf("class=\"archive-title\"");
--			if (i != -1) {
--				str_temp = str;
--				str_temp=str_temp.replaceAll(".*href=\"","");
--				str_temp=str_temp.replaceAll("\".*","");
--				m_com.add(str_temp);
--				idx++;
--			}
--		}
-+                  if (str.indexOf("class=\"year-title\"") != -1) {
-+                    i = 0;
-+                    int j;
-+                    while ((j = str.indexOf("a href=\"", i)) != -1) {
-+                      j += 8;
-+                      i = str.indexOf ("\"", j);
-+                      if (i == -1) break;
-+                      m_com.add (str.substring (j, i));
-+                      ++idx;
-+                    }
-+                  }
-+                }
- 		String []m_com_urls = new String[idx];
- 		m_com.toArray(m_com_urls);
- 	    int left, right;
-@@ -73,7 +76,7 @@ public class BugComic extends ArchivedComic {
- 
- 	@Override
- 	protected String getArchiveUrl() {
--		return "http://www.bugcomic.com/archives/";
-+		return "https://www.bugcomic.com/archives/";
- 	}
- 
- 	@Override
-@@ -114,18 +117,23 @@ public class BugComic extends ArchivedComic {
- 		String str;
- 		String final_str = null;
- 		String final_title = null;
-+                boolean next = false;
- 		while((str = reader.readLine()) != null) {
--			int index1 = str.indexOf("class=\"comicpane\"");
-+			int index1 = str.indexOf("div id=\"comic\"");
- 			if (index1 != -1) {
--				final_str = str;
--				final_title = str;
--			}
-+                          next = true;
-+                        }
-+                        else if (next) {
-+                          final_str = str;
-+                          final_title = str;
-+                          next = false;
-+                        }
- 		}
- 		final_str = final_str.replaceAll(".*src=\"","");
- 		final_str = final_str.replaceAll("\".*","");
- 		final_title = final_title.replaceAll(".*title=\"","");
- 		final_title = final_title.replaceAll("\".*","");
--		strip.setTitle("Bug Comic: "+final_title); 
-+		strip.setTitle("Bug Martini: "+final_title); 
- 		strip.setText("-NA-");
- 	    return final_str;
- 	}
+ComicReader/assets/classes.json                    |  2 +-
+ .../comicreader/comics/BugComic.java               | 40 +++++++++++++---------
+ 2 files changed, 25 insertions(+), 17 deletions(-)

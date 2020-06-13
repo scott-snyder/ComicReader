@@ -1,5 +1,5 @@
-Bottom: a883fc34b9c2c40f9824baf42576ddcb00500ed7
-Top:    d86a88924781996b69e21c47534b6bdac7c313f0
+Bottom: 7d4c2414b3baa9ef4d7c9e269a3793e5c93003fb
+Top:    b5beaa58cd594f2d22f2cde713fe3f57a93aa806
 Author: scott snyder <sss@karma>
 Date:   2020-06-01 00:12:07 -0400
 
@@ -9,15 +9,5 @@ Cyanide & Happiness: Fix for spaces in url (such as in 5572).
 
 ---
 
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
-index c93fd75..230adb2 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/Cyanide.java
-@@ -148,6 +148,7 @@ public class Cyanide extends RandomIndexedComic {
- 		Log.d(Cyanide, "In parse, final_prev = "+final_prev);		
- 		final_str = final_str.replaceAll(".*og:image\" content=\"","");
- 		final_str = final_str.replaceAll("\".*","");
-+		final_str = final_str.replaceAll(" ","%20");
- 		final_title = final_title.replaceAll(".*net/comics/","");
- 		final_title = final_title.replaceAll("/\".*","");
- 		strip.setTitle(final_title);
+.../com/blogspot/applications4android/comicreader/comics/Cyanide.java    | 1 +
+ 1 file changed, 1 insertion(+)

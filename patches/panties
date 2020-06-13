@@ -1,5 +1,5 @@
 Bottom: 54515d789e7b602f9a2b24ac06179a573d7923be
-Top:    8875c996cd9f100db70b2774106af7ef605fcc90
+Top:    da2c4ad66519d6d08a07c4a6aafe83f425debc3b
 Author: scott snyder <sss@karma>
 Date:   2019-12-26 23:57:43 -0500
 
@@ -9,49 +9,5 @@ fix for devil's panties
 
 ---
 
-diff --git a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/TheDevilsPanties.java b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/TheDevilsPanties.java
-index c4b9341..f7d98b6 100755
---- a/ComicReader/src/com/blogspot/applications4android/comicreader/comics/TheDevilsPanties.java
-+++ b/ComicReader/src/com/blogspot/applications4android/comicreader/comics/TheDevilsPanties.java
-@@ -74,7 +74,7 @@ public class TheDevilsPanties extends RandomIndexedComic {
- 
- 	@Override
- 	public String getStripUrlFromId(int num) {
--		return "http://thedevilspanties.com/archives/" + num;
-+		return getComicWebPageUrl() + "archives/" + num;
- 	}
- 
- 	@Override
-@@ -84,12 +84,12 @@ public class TheDevilsPanties extends RandomIndexedComic {
- 
- 	@Override
- 	protected String getFrontPageUrl() {
--		return "http://thedevilspanties.com/";
-+                return getComicWebPageUrl();
- 	}
- 
- 	@Override
- 	public String getComicWebPageUrl() {
--		return "http://thedevilspanties.com/";
-+		return "https://thedevilspanties.com/";
- 	}
- 
- 	@Override
-@@ -125,7 +125,7 @@ public class TheDevilsPanties extends RandomIndexedComic {
- 		// set the next and previous comic IDs from the current url's html data
- 		setNextId(parseForNextId(final_next, -1));
- 		setPreviousId(parseForPrevId(final_prev, -1));
--		return final_str; 
-+		return getComicWebPageUrl() + final_str; 
- 	}
- 
- 	@Override
-@@ -140,7 +140,7 @@ public class TheDevilsPanties extends RandomIndexedComic {
- 		}
- 		line = line.replaceAll(".*href=\"", "");
- 		line = line.replaceAll("\".*", "");
--		line = line.replaceAll("/archives/", "");
-+		line = line.replaceAll(".*/archives/", "");
- 		try {
- 			return Integer.parseInt(line);
- 		}
+.../comicreader/comics/TheDevilsPanties.java                | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
