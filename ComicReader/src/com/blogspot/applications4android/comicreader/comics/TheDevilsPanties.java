@@ -125,6 +125,9 @@ public class TheDevilsPanties extends RandomIndexedComic {
 		// set the next and previous comic IDs from the current url's html data
 		setNextId(parseForNextId(final_next, -1));
 		setPreviousId(parseForPrevId(final_prev, -1));
+                if (final_str.indexOf("http")==0) {
+                  return final_str;
+                }
 		return getComicWebPageUrl() + final_str; 
 	}
 
