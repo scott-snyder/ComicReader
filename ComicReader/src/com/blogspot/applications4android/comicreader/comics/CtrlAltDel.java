@@ -76,6 +76,7 @@ public class CtrlAltDel extends DailyComic {
         {
           getMonths();
           String month = mMonths.lastKey();
+          Log.d ("CAD", "month " + month);
           if (month == null) return null;
           SortedMap<Integer, CADStrip> dlist = getUrlsForMonth (month);
           int d = dlist.lastKey();
@@ -131,6 +132,14 @@ public class CtrlAltDel extends DailyComic {
                       c.set (y, m-1, d);
                       return c;
                     }
+                  }
+                  else {
+                    int y = Integer.parseInt (url.substring (i,   i+4));
+                    int m = Integer.parseInt (url.substring (i+4, i+5) + url.substring (i+6, i+7));
+                    int d = Integer.parseInt (url.substring (i+7, i+9));
+                    Calendar c = Calendar.getInstance();
+                    c.set (y, m-1, d);
+                    return c;
                   }
                 }
                 else {
@@ -325,6 +334,7 @@ public class CtrlAltDel extends DailyComic {
 
         protected SortedMap<Integer, CADStrip> getUrlsForMonth (String month)
         {
+          Log.d ("CAD", "getUrlsFroMonth " + month);
             getMonths();
             TreeMap<Integer, CADStrip> l = mMonths.get (month);
             try {
@@ -334,6 +344,7 @@ public class CtrlAltDel extends DailyComic {
                   URI uri = new URI("https://cad-comic.com/wp-admin/admin-ajax.php");
                   String data = "action=custom_cat_search&post_cat=all&post_month="+month;
                   String sdata = Downloader.downloadToString(uri, data);
+                  Log.d ("CAD", "  sdata " + sdata);
                   JSONObject root = new JSONObject(sdata);
                   JSONArray posts = root.getJSONArray("posts");
                   List<String> ret = new ArrayList<String>();
@@ -341,8 +352,10 @@ public class CtrlAltDel extends DailyComic {
                   for (int i = posts.length()-1; i >= 0; i--) {
                     JSONObject o = posts.getJSONObject(i);
                     String url = o.getString("comic");
+                    Log.d ("CAD", "  got " + url);
                     if (url.lastIndexOf("KDM") >= 0) continue;
                     Calendar c = getTimeFromUrl (url, next);
+                    Log.d ("CAD", "     month " + monthKey(c));
                     if (!month.equals (monthKey (c))) {
                       continue;
                     }
