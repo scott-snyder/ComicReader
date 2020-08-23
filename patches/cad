@@ -1,5 +1,5 @@
 Bottom: 451c1312c91ded54c293bdd271a408d58b4a705a
-Top:    7d4c2414b3baa9ef4d7c9e269a3793e5c93003fb
+Top:    edf5f892450e6428288fbf19373e218b405fe6ed
 Author: scott snyder <sss@karma>
 Date:   2020-05-30 00:32:22 -0400
 
@@ -9,5 +9,5 @@ Fix for Ctrl-Alt-Del (handle Starcaster Chronicles).
 
 ---
 
-.../comicreader/comics/CtrlAltDel.java             | 89 +++++++++++++---------
- 1 file changed, 54 insertions(+), 35 deletions(-)
+.../comicreader/comics/CtrlAltDel.java             | 102 ++++++++++++++-------
+ 1 file changed, 67 insertions(+), 35 deletions(-)
