@@ -1,5 +1,5 @@
 Bottom: edf5f892450e6428288fbf19373e218b405fe6ed
-Top:    5f321a5db402df57d3b8bc7aab073c451f4ef1ca
+Top:    ddc16062d33803eb71a8f85c458d66b9af5775ea
 Author: scott snyder <sss@karma>
 Date:   2020-06-01 00:12:07 -0400
 
@@ -9,5 +9,5 @@ Cyanide & Happiness: Fix for spaces in url (such as in 5572).
 
 ---
 
-.../com/blogspot/applications4android/comicreader/comics/Cyanide.java    | 1 +
- 1 file changed, 1 insertion(+)
+.../applications4android/comicreader/comics/Cyanide.java      | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
