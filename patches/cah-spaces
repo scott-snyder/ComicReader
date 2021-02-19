@@ -3,8 +3,11 @@ Top:    ddc16062d33803eb71a8f85c458d66b9af5775ea
 Author: scott snyder <sss@karma>
 Date:   2020-06-01 00:12:07 -0400
 
-Cyanide & Happiness: Fix for spaces in url (such as in 5572).
+Fixes for Cyanide & Happiness
 
+Fix for spaces in url (such as in 5572).
+
+Use https instead of http.
 
 
 ---
