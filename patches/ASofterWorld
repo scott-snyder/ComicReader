@@ -1,5 +1,5 @@
 Bottom: 2120f9f2719d0fddb33ba5b8b1bc9d49cfc017bd
-Top:    75ea2eefd7d918f230f1a2bce2841710ff69ddaf
+Top:    f14e0fdd426d34a37c9b2b3ccbd14fc2005721f8
 Author: scott snyder <sss@karma>
 Date:   2019-12-29 21:22:24 -0500
 
@@ -9,5 +9,5 @@ Fix a softer world
 
 ---
 
-.../comicreader/comics/ASofterWorld.java                | 17 ++++++-----------
- 1 file changed, 6 insertions(+), 11 deletions(-)
+.../comicreader/comics/ASofterWorld.java           | 27 +++++++++-------------
+ 1 file changed, 11 insertions(+), 16 deletions(-)
