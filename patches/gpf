@@ -1,0 +1,13 @@
+Bottom: c11d8a7e215aab777f6ffe1e2f62d93768a4bcde
+Top:    c11d8a7e215aab777f6ffe1e2f62d93768a4bcde
+Author: scott snyder <sss@karma>
+Date:   2021-02-21 18:57:20 -0500
+
+Fix General Protection Fault
+
+http -> https
+
+
+---
+
+
