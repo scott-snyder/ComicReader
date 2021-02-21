@@ -12,11 +12,11 @@ public class ASofterWorld extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.asofterworld.com/";
+		return "https://www.asofterworld.com/";
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://www.asofterworld.com/";
+		return "https://www.asofterworld.com/";
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class ASofterWorld extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.asofterworld.com/index.php?id=" + num;
+		return "https://www.asofterworld.com/index.php?id=" + num;
 	}
 
 	@Override
@@ -81,8 +81,8 @@ public class ASofterWorld extends IndexedComic {
 		final_title = final_title.replaceAll(".*title=\"","");
 		final_title = final_title.replaceAll("\".*","");
 		strip.setTitle(final_title);
-		if(!final_str.startsWith("http://www.asofterworld.com")) {
-			return "http://www.asofterworld.com/"+final_str;
+		if(!final_str.startsWith("https://www.asofterworld.com")) {
+			return "https://www.asofterworld.com/"+final_str;
 		}
 		return final_str;
 	}
