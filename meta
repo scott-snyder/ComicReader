@@ -1,6 +1,6 @@
 Version: 1
-Previous: d7cdac73bc90d07891b269bcb4f4f0f0c1a7abff
-Head: df0a3235d7976e57394285e76465e3200a64c371
+Previous: 01f3f50ad49eff2300e5f34d1cf1d3a3fd71ffaa
+Head: f8dcd353d8e9c7d5a10b194db43fd05c6ca45b9d
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -28,5 +28,6 @@ Applied:
   dumbing-wip: 3742b2802bb39fb82733fc4526f5172e86caf449
   edmund-wip: 75e26ddc93a71ab35bf2b0f4a70718889eb99add
   eerie-wip: df0a3235d7976e57394285e76465e3200a64c371
+  goonish-wip: f8dcd353d8e9c7d5a10b194db43fd05c6ca45b9d
 Unapplied:
 Hidden:
