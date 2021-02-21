@@ -1,0 +1,11 @@
+Bottom: 45e481b55a1eebc52189dfd5b7e92f2a30ee80b6
+Top:    632a18092efa98fce241cf706447a99060900350
+Author: scott snyder <sss@karma>
+Date:   2021-02-21 18:41:37 -0500
+
+Refresh of dumbing-wip
+
+---
+
+.../applications4android/comicreader/comics/DumbingofAge.java       | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
