@@ -1,5 +1,5 @@
 Bottom: befe0029d8a78f65848a826c8471e961f9876df3
-Top:    befe0029d8a78f65848a826c8471e961f9876df3
+Top:    818b8dfd540087b261fd116fe883ad75c20bf427
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:34:00 -0500
 
@@ -8,4 +8,5 @@ diesel sweeties wip
 
 ---
 
-
+.../applications4android/comicreader/comics/Dieselsweeties.java   | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
