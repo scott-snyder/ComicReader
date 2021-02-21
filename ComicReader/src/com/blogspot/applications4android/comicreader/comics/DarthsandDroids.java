@@ -13,12 +13,12 @@ public class DarthsandDroids extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://darthsanddroids.net/";
+		return "https://darthsanddroids.net/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://darthsanddroids.net/";
+		return "https://darthsanddroids.net/";
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class DarthsandDroids extends IndexedComic {
 		} else {
 			str = "" + num;
 		}
-		return "http://darthsanddroids.net/episodes/"+str+".html";
+		return "https://darthsanddroids.net/episodes/"+str+".html";
 	}
 
 	@Override
@@ -85,6 +85,6 @@ public class DarthsandDroids extends IndexedComic {
     	final_title = final_title.replaceAll("\".*","");
 		strip.setTitle(final_title);
 		strip.setText("-NA-");
-		return "http://darthsanddroids.net/"+final_str;
+		return "https://darthsanddroids.net/"+final_str;
 	}
 }
