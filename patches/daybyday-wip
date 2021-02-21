@@ -1,5 +1,5 @@
 Bottom: 3fb05dc35cf0f9f86006aac8e7dddacfaf29cc84
-Top:    3fb05dc35cf0f9f86006aac8e7dddacfaf29cc84
+Top:    befe0029d8a78f65848a826c8471e961f9876df3
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:31:37 -0500
 
@@ -8,4 +8,5 @@ day by day wip
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/DayByDay.java    | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
