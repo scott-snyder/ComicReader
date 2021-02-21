@@ -12,11 +12,11 @@ public class Dieselsweeties extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.dieselsweeties.com/";
+		return "https://www.dieselsweeties.com/";
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://www.dieselsweeties.com";
+		return "https://www.dieselsweeties.com";
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class Dieselsweeties extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.dieselsweeties.com/archive/" + num;
+		return "https://www.dieselsweeties.com/archive/" + num;
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class Dieselsweeties extends IndexedComic {
 		}
 		final_str = final_str.replaceAll(".*src=\"","");
 		final_str = final_str.replaceAll("\".*","");
-		final_str = "http://www.dieselsweeties.com" + final_str;
+		final_str = "https://www.dieselsweeties.com" + final_str;
 		final_itext = final_itext.replaceAll(".*title=\"","");
 		final_itext = final_itext.replaceAll("\" .*","");
 		strip.setTitle("Diesel Sweeties: " + final_itext);
