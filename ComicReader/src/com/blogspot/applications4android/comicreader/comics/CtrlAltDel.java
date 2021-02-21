@@ -133,6 +133,15 @@ public class CtrlAltDel extends DailyComic {
                       return c;
                     }
                   }
+                  else if (url.substring(i+8,i+9).equals("a")) {
+                    // https://cad-comic.com/wp-content/uploads/2021/01/Strip20210201aa.png
+                      int y = Integer.parseInt (url.substring (i,   i+4));
+                      int m = Integer.parseInt (url.substring (i+4, i+6));
+                      int d = Integer.parseInt (url.substring (i+6, i+8));
+                      Calendar c = Calendar.getInstance();
+                      c.set (y, m-1, d);
+                      return c;
+                  }
                   else {
                     int y = Integer.parseInt (url.substring (i,   i+4));
                     int m = Integer.parseInt (url.substring (i+4, i+5) + url.substring (i+6, i+7));
@@ -154,7 +163,19 @@ public class CtrlAltDel extends DailyComic {
                     c.set (y, m-1, d);
                     return c;
                   }
-                  return null;
+                  else {
+                    //https://cad-comic.com/wp-content/uploads/2017/03/cad-20021023-87d52.jpg
+                    i = url.lastIndexOf ("/cad-");
+                    if (i >= 0) {
+                      int y = Integer.parseInt (url.substring (i+5,   i+9));
+                      int m = Integer.parseInt (url.substring (i+9,   i+11));
+                      int d = Integer.parseInt (url.substring (i+11,  i+13));
+                      Calendar c = Calendar.getInstance();
+                      c.set (y, m-1, d);
+                      return c;
+                    }
+                    return null;
+                  }
                 }
               }
             }
