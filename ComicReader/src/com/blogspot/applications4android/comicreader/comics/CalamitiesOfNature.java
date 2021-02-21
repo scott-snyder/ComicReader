@@ -12,12 +12,12 @@ public class CalamitiesOfNature extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://calamitiesofnature.com/archive";
+		return "https://calamitiesofnature.com/archive";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://calamitiesofnature.com/";
+		return "https://calamitiesofnature.com/";
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class CalamitiesOfNature extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.calamitiesofnature.com/archive/?c=" + num;
+		return "https://www.calamitiesofnature.com/archive/?c=" + num;
 	}
 
 	@Override
@@ -64,6 +64,6 @@ public class CalamitiesOfNature extends IndexedComic {
 		int currId = Integer.parseInt(url_str.replaceAll("http://www.calamitiesofnature.com/archive/\\?c=", ""));
 		strip.setTitle("Calamities Of Nature: " + currId);
 		strip.setText("-NA-");
-		return "http://www.calamitiesofnature.com/archive/"+currId+".jpg";
+		return "https://www.calamitiesofnature.com/archive/"+currId+".jpg";
 	}
 }
