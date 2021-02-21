@@ -12,12 +12,12 @@ public class DarkLegacy extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.darklegacycomics.com/";
+		return "https://www.darklegacycomics.com/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.darklegacycomics.com/";
+		return "https://www.darklegacycomics.com/";
 	}
 
 	@Override
@@ -56,7 +56,7 @@ public class DarkLegacy extends IndexedComic {
 		} else {
 			str = "" + num;
 		}
-		return "http://www.darklegacycomics.com/" + str + ".html";
+		return "https://www.darklegacycomics.com/" + str + ".html";
 	}
 
 	@Override
@@ -79,6 +79,6 @@ public class DarkLegacy extends IndexedComic {
 		int id = getIdFromStripUrl(url);
 		strip.setTitle("Dark Legacy: "+id); 
 		strip.setText("-NA-");
-		return "http://www.darklegacycomics.com/"+id+".jpg";
+		return "https://www.darklegacycomics.com/"+id+".jpg";
 	}
 }
