@@ -1,5 +1,5 @@
 Bottom: 66e3e2462d3dfb3c127cabbcfa877d21619dd24a
-Top:    66e3e2462d3dfb3c127cabbcfa877d21619dd24a
+Top:    2b744f6b0eb620cbe1d7d51a23b2c54d04924058
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 12:47:46 -0500
 
@@ -18,4 +18,25 @@ little-moments-of-love (catana comics)
 
 ---
 
-
+ComicReader/assets/classes.json                       | 10 +++++++++-
+ .../comicreader/comics/DailyKingFeatures/Bleeker.java | 19 -------------------
+ .../comics/GoComics/BigNateFirstClass.java            | 13 +++++++++++++
+ .../comicreader/comics/GoComics/BirdAndMoon.java      | 13 +++++++++++++
+ .../comicreader/comics/GoComics/Bleeker.java          | 13 +++++++++++++
+ .../comicreader/comics/GoComics/BloomCounty2019.java  | 13 +++++++++++++
+ .../comicreader/comics/GoComics/BreakingCatNews.java  | 13 +++++++++++++
+ .../comicreader/comics/GoComics/Bully.java            | 13 +++++++++++++
+ .../comicreader/comics/GoComics/BushyTales.java       | 13 +++++++++++++
+ .../comics/GoComics/LittleMomentsOfLove.java          | 13 +++++++++++++
+ .../comicreader/comics/GoComics/TimCampbell.java      | 13 +++++++++++++
+ 11 files changed, 126 insertions(+), 20 deletions(-)
+ delete mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/DailyKingFeatures/Bleeker.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BigNateFirstClass.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BirdAndMoon.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/Bleeker.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BloomCounty2019.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BreakingCatNews.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/Bully.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BushyTales.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/LittleMomentsOfLove.java
+ create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/TimCampbell.java
