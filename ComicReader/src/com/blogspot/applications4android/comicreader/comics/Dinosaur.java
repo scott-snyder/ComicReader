@@ -12,12 +12,12 @@ public class Dinosaur extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.qwantz.com/index.php?mobile=0";
+		return "https://www.qwantz.com/index.php?mobile=0";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.qwantz.com";
+		return "https://www.qwantz.com";
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class Dinosaur extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.qwantz.com/index.php?mobile=0&comic=" + num;
+		return "https://www.qwantz.com/index.php?mobile=0&comic=" + num;
 	}
 
 	@Override
