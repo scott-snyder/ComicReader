@@ -1,0 +1,11 @@
+Bottom: 2b744f6b0eb620cbe1d7d51a23b2c54d04924058
+Top:    6c76d16961b7a55db3c313cb731ef9262059cb61
+Author: scott snyder <sss@karma>
+Date:   2021-02-21 18:13:33 -0500
+
+Refresh of ASofterWorld
+
+---
+
+.../applications4android/comicreader/comics/ASofterWorld.java  | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
