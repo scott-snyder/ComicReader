@@ -19,7 +19,7 @@ public class Dilbert extends DailyComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.dilbert.com";
+		return "https://www.dilbert.com";
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class Dilbert extends DailyComic {
 		String str;
 		String final_str = null;
 		String final_title = null;
-		String final_date = url.replaceAll("http://www.dilbert.com/strips/comic", "").replaceAll("/", "");
+		String final_date = url.replaceAll("https://www.dilbert.com/strips/comic", "").replaceAll("/", "");
 		while((str = reader.readLine()) != null) {
 			int index1 = str.indexOf("class=\"img-responsive img-comic\"");
 			if (index1 != -1) {
@@ -52,7 +52,7 @@ public class Dilbert extends DailyComic {
 			}
 		}
         if(final_str != null) {
-            final_str = final_str.replaceAll(".*src=\"", "http:");
+            final_str = final_str.replaceAll(".*src=\"", "https:");
             final_str = final_str.replaceAll("\".*", "");
         }
 		final_title = "Dilbert" + ": " + final_date;
@@ -63,7 +63,7 @@ public class Dilbert extends DailyComic {
 
 	@Override
 	public String getUrlFromTime(Calendar cal) {
-		return String.format("http://www.dilbert.com/strips/comic/%4d-%02d-%02d/",
+		return String.format("https://www.dilbert.com/strips/comic/%4d-%02d-%02d/",
 				cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, cal.get(Calendar.DAY_OF_MONTH));
 	}
 
