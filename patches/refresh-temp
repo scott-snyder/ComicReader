@@ -1,0 +1,11 @@
+Bottom: 7a8582b8585c9c75b34a5d2fd35adfa880753ace
+Top:    2108917c0cc5102175d862f2cae81052959c6f4b
+Author: scott snyder <sss@karma>
+Date:   2021-02-21 18:27:14 -0500
+
+Refresh of darklegacy-wip
+
+---
+
+.../applications4android/comicreader/comics/DarkLegacy.java       | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
