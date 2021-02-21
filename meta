@@ -1,6 +1,6 @@
 Version: 1
-Previous: b07f7d9e6d9fcf033ddb1187e0849f95a2a904e8
-Head: 7766cfd72815fb4b4b116bd199cd431555980c1c
+Previous: c4eda5ef3e7faae8fd2db36cfae08f6e88d78d7a
+Head: 75e26ddc93a71ab35bf2b0f4a70718889eb99add
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -26,7 +26,6 @@ Applied:
   dilbert-wip: 9ffb7570ec40c634f3626d48b8430fb4ea66ac54
   dinosaur-wip: 9bf5dec89c329b440a5d72c0b8d267d1ab559924
   dumbing-wip: 3742b2802bb39fb82733fc4526f5172e86caf449
-  edmund-wip: 8365805bc0d78dcfb1b7087d8d6c4715ab0f418a
-  refresh-temp: 7766cfd72815fb4b4b116bd199cd431555980c1c
+  edmund-wip: 75e26ddc93a71ab35bf2b0f4a70718889eb99add
 Unapplied:
 Hidden:
