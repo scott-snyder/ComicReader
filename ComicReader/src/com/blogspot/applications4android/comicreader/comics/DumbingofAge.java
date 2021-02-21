@@ -12,7 +12,7 @@ public class DumbingofAge extends YearlyArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.dumbingofage.com/";
+		return "https://www.dumbingofage.com/";
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class DumbingofAge extends YearlyArchivedComic {
 		ArrayList<String> coms = new ArrayList<String>(); 
 		String str;
 		while((str = reader.readLine()) != null) {
-			if(str.indexOf("http://www.dumbingofage.com/"+year+"/comic/") != -1) {
+			if(str.indexOf("https://www.dumbingofage.com/"+year+"/comic/") != -1) {
 				String str_temp = str.replaceAll(".*href=\"","");
 				str_temp = str_temp.replaceAll("\".*","");
 				coms.add(str_temp);
@@ -57,7 +57,7 @@ public class DumbingofAge extends YearlyArchivedComic {
 
 	@Override
 	protected String getArchiveUrl(int year) {
-		return "http://www.dumbingofage.com/archive/?archive_year="+year;
+		return "https://www.dumbingofage.com/archive/?archive_year="+year;
 	}
 
 	@Override
