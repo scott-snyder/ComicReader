@@ -15,7 +15,7 @@ public class ElGoonishShive extends YearlyArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.egscomics.com/";
+		return "https://www.egscomics.com/";
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class ElGoonishShive extends YearlyArchivedComic {
 			Matcher urlMatcher = imgPattern.matcher(line);
 
 			if(urlMatcher.find()) {
-				imgUrl = "http://www.egscomics.com/"+urlMatcher.group(0);
+				imgUrl = "https://www.egscomics.com/"+urlMatcher.group(0);
 			}
 			
 			if(line.matches(".*<title>.*")) {
@@ -68,7 +68,7 @@ public class ElGoonishShive extends YearlyArchivedComic {
 			if(line.contains("index.php?date=")) {
 				
 				while(urlMatcher.find()) {
-					urls.add("http://www.egscomics.com/index.php?"+urlMatcher.group());
+					urls.add("https://www.egscomics.com/index.php?"+urlMatcher.group());
 				}
 			}
 		}
@@ -84,7 +84,7 @@ public class ElGoonishShive extends YearlyArchivedComic {
 
 	@Override
 	protected String getArchiveUrl(int year) {
-		return String.format("http://www.egscomics.com/archives.php?year=%04d&start=0&displaymode=cal",
+		return String.format("https://www.egscomics.com/archives.php?year=%04d&start=0&displaymode=cal",
 				year);
 	}
 
