@@ -19,7 +19,7 @@ public class DayByDay extends DailyComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.daybydaycartoon.com/";
+		return "https://www.daybydaycartoon.com/";
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public class DayByDay extends DailyComic {
 
 	@Override
 	public String getUrlFromTime(Calendar cal) {
-		return String.format("http://www.daybydaycartoon.com/%4d/%02d/%02d/",
+		return String.format("https://www.daybydaycartoon.com/%4d/%02d/%02d/",
 				cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, cal.get(Calendar.DAY_OF_MONTH));
 	}
 
