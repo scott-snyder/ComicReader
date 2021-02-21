@@ -40,7 +40,7 @@ public class GeneralProtectionFault extends YearlyArchivedComic {
 
     @Override
     protected String getArchiveUrl(int year) {
-        return "http://www.gpf-comics.com/archive/calendar.php?year=" + year;
+        return "https://www.gpf-comics.com/archive/calendar.php?year=" + year;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class GeneralProtectionFault extends YearlyArchivedComic {
 
     @Override
     public String getComicWebPageUrl() {
-        return "http://www.gpf-comics.com/";
+        return "https://www.gpf-comics.com/";
     }
 
     @Override
@@ -73,7 +73,7 @@ public class GeneralProtectionFault extends YearlyArchivedComic {
         }
         final_str = final_str.replaceAll(".*src=\"","");
         final_str = final_str.replaceAll("\".*","");
-        final_str = "http://www.gpf-comics.com" + final_str;
+        final_str = "https://www.gpf-comics.com" + final_str;
         final_title = final_title.replaceAll(".*alt=\"","");
         final_title = final_title.replaceAll("\".*","");
         strip.setTitle("GPF: "+final_title); 
