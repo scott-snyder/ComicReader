@@ -21,7 +21,7 @@ public class EdmundFinney extends ArchivedComic {
 		ArrayList<String> strips = new ArrayList<String>();
 		String line = reader.readLine();
 		
-		Pattern archiveStripPattern = Pattern.compile("http://eqcomics.com/..../../../.*?/");
+		Pattern archiveStripPattern = Pattern.compile("https://eqcomics.com/..../../../.*?/");
 		
 		while((line != null)) {
 			
@@ -41,12 +41,12 @@ public class EdmundFinney extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://eqcomics.com/archive";
+		return "https://eqcomics.com/archive";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://eqcomics.com";
+		return "https://eqcomics.com";
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class EdmundFinney extends ArchivedComic {
 		String imgUrl = null;
 		String title  = null;
 		
-		Pattern imgPattern = Pattern.compile("http://eqcomics.com/comics/.*(jpg|png|gif)");
+		Pattern imgPattern = Pattern.compile("https://eqcomics.com/comics/.*(jpg|png|gif)");
 		
 		Log.d("edmundfinney","parsing url: "+url);
 		
