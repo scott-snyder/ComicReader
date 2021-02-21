@@ -22,11 +22,11 @@ public class EerieCuties extends ArchivedComic {
 		String str,str_temp;
 		int i,j;
 		while((str = reader.readLine()) != null) {
-			i = str.indexOf("><a href=\"http://www.eeriecuties.com/strips-ec/");
+			i = str.indexOf("><a href=\"https://www.eeriecuties.com/strips-ec/");
 			if (i != -1) {
 				str_temp = str;
 				str_temp=str_temp.replaceAll(".*?href=\"","");
-				int index = str_temp.indexOf("src=\"http://ace.eeriecuties.com/comics/tn/");
+				int index = str_temp.indexOf("src=\"https://ace.eeriecuties.com/comics/tn/");
 				if(index>0){
 					str_temp = str_temp.substring(0,index-7);
 				}
@@ -96,10 +96,10 @@ public class EerieCuties extends ArchivedComic {
 
 	private ArrayList<String> getVolURL() {
 		ArrayList<String> vol_urls = new ArrayList<String>();
-		vol_urls.add("http://www.eeriecuties.com/archive/volume0");
-		vol_urls.add("http://www.eeriecuties.com/archive/volume1");
-		vol_urls.add("http://www.eeriecuties.com/archive/volume2");
-		vol_urls.add("http://www.eeriecuties.com/archive/volume3");
+		vol_urls.add("https://www.eeriecuties.com/archive/volume0");
+		vol_urls.add("https://www.eeriecuties.com/archive/volume1");
+		vol_urls.add("https://www.eeriecuties.com/archive/volume2");
+		vol_urls.add("https://www.eeriecuties.com/archive/volume3");
 		return vol_urls;
 	}
 	
@@ -111,12 +111,12 @@ public class EerieCuties extends ArchivedComic {
 	
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.eeriecuties.com/archive";
+		return "https://www.eeriecuties.com/archive";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.eeriecuties.com/";
+		return "https://www.eeriecuties.com/";
 	}
 
 	@Override
@@ -132,7 +132,7 @@ public class EerieCuties extends ArchivedComic {
 		String str,str_temp;
 		int i;
 		while((str = reader.readLine()) != null) {
-			i = str.indexOf("http://ace.eeriecuties.com/comics/");
+			i = str.indexOf("https://ace.eeriecuties.com/comics/");
 			if (i != -1) {
 				str_temp = str;
 				str_temp=str_temp.replaceAll(".*?src=\"","");
