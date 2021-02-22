@@ -1,6 +1,6 @@
 Version: 1
-Previous: 9906946bdc6dcac85942c9bd9181f3ee0fefcaf8
-Head: 3a47f18cb58034ce772ce8fb8744ab16946e3ccb
+Previous: 1cdb3f54fd6e0841a6d507ab4d260b58f24dda4b
+Head: 98a317d098fe134ffce64fce53e353dd0e711647
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -36,7 +36,6 @@ Applied:
   kevinkell-wip: a257b3a1ef641f1587c8554c2572708b82cefa48
   least-wip: 0994b14bc8113f04a93a9b060a24c77095afecc7
   looking-wip: 2c059207cb8d5d23f556d2a196a1611433a313f1
-  megatokyo: d44ce509d066e0d952cc1e3b1ce661edea13c068
-  refresh-temp: 3a47f18cb58034ce772ce8fb8744ab16946e3ccb
+  megatokyo: 98a317d098fe134ffce64fce53e353dd0e711647
 Unapplied:
 Hidden:

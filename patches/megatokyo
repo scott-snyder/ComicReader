@@ -1,5 +1,5 @@
 Bottom: 9c27cfabd0ecfdd4b418bc2024fdb2b57e674769
-Top:    9c27cfabd0ecfdd4b418bc2024fdb2b57e674769
+Top:    df8a885914b04a29269fa65fb7fb7679fe2dc01f
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 22:18:45 -0500
 
@@ -10,4 +10,5 @@ http -> https
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/MegaTokyo.java | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
