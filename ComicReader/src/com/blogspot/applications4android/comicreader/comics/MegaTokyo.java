@@ -12,12 +12,12 @@ public class MegaTokyo extends IndexedComic {
 	
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://megatokyo.com/";
+		return "https://megatokyo.com/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://megatokyo.com/strip";
+		return "https://megatokyo.com/strip";
 	}
 	
 	@Override
@@ -43,7 +43,7 @@ public class MegaTokyo extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.megatokyo.com/strip/" + num;	}
+		return "https://www.megatokyo.com/strip/" + num;	}
 
 	@Override
 	protected int getIdFromStripUrl(String url) {
