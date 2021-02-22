@@ -35,12 +35,12 @@ public class GrrlPower extends ArchivedComic{
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.grrlpowercomic.com/archives";
+		return "https://www.grrlpowercomic.com/archive";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.grrlpowercomic.com/";
+		return "https://www.grrlpowercomic.com/";
 	}
 
 	@Override
