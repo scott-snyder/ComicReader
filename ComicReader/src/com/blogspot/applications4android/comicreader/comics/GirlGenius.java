@@ -17,7 +17,7 @@ public class GirlGenius extends DailyComic {
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://www.girlgeniusonline.com/comic.php";
+		return "https://www.girlgeniusonline.com/comic.php";
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public class GirlGenius extends DailyComic {
 
 	@Override
 	public String getUrlFromTime(Calendar cal) {
-		return String.format("http://www.girlgeniusonline.com/comic.php?date=%4d%02d%02d",
+		return String.format("https://www.girlgeniusonline.com/comic.php?date=%4d%02d%02d",
 				cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, cal.get(Calendar.DAY_OF_MONTH));
 	}
 
@@ -79,7 +79,7 @@ public class GirlGenius extends DailyComic {
 			throws IOException {
 		String url_link = url;
 		String str_title = url_link;
-		url_link = url_link.replaceAll(".*date=","http://www.girlgeniusonline.com/ggmain/strips/ggmain");
+		url_link = url_link.replaceAll(".*date=","https://www.girlgeniusonline.com/ggmain/strips/ggmain");
 		url_link = url_link+".jpg";
 		str_title = str_title.replaceAll(".*date=","");
 		int len = str_title.length();
