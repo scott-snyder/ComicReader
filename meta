@@ -1,6 +1,6 @@
 Version: 1
-Previous: 50f628946ea381dc6c54201ce464dfa0b3ef37e1
-Head: 8cf69df780697ec76949e22b508ecc4940ec0497
+Previous: c7cffacbe5b9f432aef2bd502629deb1903fe81b
+Head: 86735b0d62ba9712b77a954d0d3e531c03da5aa0
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -32,7 +32,6 @@ Applied:
   gpf: bdd5f1f13ff03e147be7c5f5c8b2b8e926ce4699
   girlgenius: 4e4a9903cdd15978a9720a9dc91113f0100dcd1a
   grrl-wip: f7ca9972f037d6828dc6a8ea4dae823031f026b0
-  gunnerkrigg: 23f5b6a6422b7d1ca49b34a414c3679bfbb5f175
-  refresh-temp: 8cf69df780697ec76949e22b508ecc4940ec0497
+  gunnerkrigg: 86735b0d62ba9712b77a954d0d3e531c03da5aa0
 Unapplied:
 Hidden:

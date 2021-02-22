@@ -1,5 +1,5 @@
 Bottom: ecb01b648e02d8d1703976109669b66a5bcabeeb
-Top:    ecb01b648e02d8d1703976109669b66a5bcabeeb
+Top:    27cfff37678ad549f7677e579fe978fae662db11
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 21:57:52 -0500
 
@@ -10,4 +10,5 @@ http -> https
 
 ---
 
-
+.../applications4android/comicreader/comics/GunnerkriggCourt.java | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
