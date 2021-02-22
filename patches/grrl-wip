@@ -1,5 +1,5 @@
 Bottom: 638a736fe7101d2612350b67fa6d8e0d4c9f41f1
-Top:    638a736fe7101d2612350b67fa6d8e0d4c9f41f1
+Top:    ecb01b648e02d8d1703976109669b66a5bcabeeb
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 21:34:36 -0500
 
@@ -8,4 +8,5 @@ grrl-wip
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/GrrlPower.java   | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
