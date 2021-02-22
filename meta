@@ -1,6 +1,6 @@
 Version: 1
-Previous: 384cc3ee944b91a6463e6be5e738d67bbd5f6839
-Head: d44ce509d066e0d952cc1e3b1ce661edea13c068
+Previous: 9906946bdc6dcac85942c9bd9181f3ee0fefcaf8
+Head: 3a47f18cb58034ce772ce8fb8744ab16946e3ccb
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -37,5 +37,6 @@ Applied:
   least-wip: 0994b14bc8113f04a93a9b060a24c77095afecc7
   looking-wip: 2c059207cb8d5d23f556d2a196a1611433a313f1
   megatokyo: d44ce509d066e0d952cc1e3b1ce661edea13c068
+  refresh-temp: 3a47f18cb58034ce772ce8fb8744ab16946e3ccb
 Unapplied:
 Hidden:
