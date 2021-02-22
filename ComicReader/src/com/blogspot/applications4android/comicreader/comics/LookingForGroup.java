@@ -12,12 +12,12 @@ public class LookingForGroup extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.lfgcomic.com/";
+		return "https://www.lfgcomic.com/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.lfgcomic.com";
+		return "https://www.lfgcomic.com";
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class LookingForGroup extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.lfgcomic.com/page/" + num;
+		return "https://www.lfgcomic.com/page/" + num;
 	}
 
 	@Override
