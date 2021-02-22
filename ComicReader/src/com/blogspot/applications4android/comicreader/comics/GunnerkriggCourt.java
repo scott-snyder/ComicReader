@@ -12,12 +12,12 @@ public class GunnerkriggCourt extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.gunnerkrigg.com/";
+		return "https://www.gunnerkrigg.com/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.gunnerkrigg.com/";
+		return "https://www.gunnerkrigg.com/";
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class GunnerkriggCourt extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.gunnerkrigg.com/archive_page.php?comicID=" + num;
+		return "https://www.gunnerkrigg.com/archive_page.php?comicID=" + num;
 	}
 
 	@Override
@@ -71,6 +71,6 @@ public class GunnerkriggCourt extends IndexedComic {
 		final_str = final_str.replaceAll("\".*","");
     	strip.setTitle("Gunnerkrigg Court");
 		strip.setText("-NA-");
-		return "http://www.gunnerkrigg.com" + final_str;
+		return "https://www.gunnerkrigg.com" + final_str;
 	}
 }
