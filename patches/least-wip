@@ -1,5 +1,5 @@
 Bottom: d2856e3a187748437ddb42ddd81eedb4c8250041
-Top:    d2856e3a187748437ddb42ddd81eedb4c8250041
+Top:    c14cb380ea90f5a0403c21aaab9167da6f77553c
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 22:11:11 -0500
 
@@ -8,4 +8,5 @@ least i could do wip
 
 ---
 
-
+.../applications4android/comicreader/comics/LeastICouldDo.java    | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
