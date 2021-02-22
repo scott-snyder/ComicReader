@@ -17,7 +17,7 @@ public class LeastICouldDo extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.leasticoulddo.com/";
+		return "https://www.leasticoulddo.com/";
 	}
 
 	
@@ -42,7 +42,7 @@ public class LeastICouldDo extends ArchivedComic {
 			// for (c.set(2003, 2, 10); c.get(Calendar.MONTH) <= 2004;
 			// c.add(Calendar.DAY_OF_YEAR, 1)) {
 			for (c.set(2003, 2, 10); c.compareTo(today) <= -1; c.add(Calendar.DAY_OF_YEAR, 1)) {
-				String surl = String.format("http://leasticoulddo.com/comic/%4d%02d%02d/", c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1,
+				String surl = String.format("https://leasticoulddo.com/comic/%4d%02d%02d/", c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1,
 						c.get(Calendar.DAY_OF_MONTH));
 				all_yrs.add(surl);
 				Log.d("ComicDay", surl);
@@ -62,7 +62,7 @@ public class LeastICouldDo extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.leasticoulddo.com/";
+		return "https://www.leasticoulddo.com/";
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class LeastICouldDo extends ArchivedComic {
 		date = date.replaceAll("/", "");
 		strip.setTitle("Least I Could Do: " + date);
 		strip.setText("-NA-");
-		return "http://cdn.leasticoulddo.com/comics/" + date + ".gif";
+		return "https://cdn.leasticoulddo.com/comics/" + date + ".gif";
 	}
 
 }
