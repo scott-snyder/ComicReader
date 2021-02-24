@@ -12,12 +12,12 @@ public class QuestionableContent extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.questionablecontent.net";
+		return "https://www.questionablecontent.net";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.questionablecontent.net";
+		return "https://www.questionablecontent.net";
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class QuestionableContent extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.questionablecontent.net/view.php?comic=" + num;
+		return "https://www.questionablecontent.net/view.php?comic=" + num;
 	}
 
 	@Override
@@ -73,6 +73,6 @@ public class QuestionableContent extends IndexedComic {
 		}
 		strip.setTitle("Questionable Content : "+id);
 		strip.setText("-NA-");
-		return "http://www.questionablecontent.net/comics/"+id+fileExt;
+		return "https://www.questionablecontent.net/comics/"+id+fileExt;
 	}
 }
