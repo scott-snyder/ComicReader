@@ -11,7 +11,7 @@ public class SluggyFreelance extends DailyComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.sluggy.com";
+		return "https://www.sluggy.com";
 	}
 
 	protected Calendar getFirstCalendar() {
@@ -28,7 +28,7 @@ public class SluggyFreelance extends DailyComic {
 	@Override
 	protected Calendar getTimeFromUrl(String url) {
 		String str = url.replace(
-				"http://www.sluggy.com/comics/archives/daily/", "");
+				"https://www.sluggy.com/comics/archives/daily/", "");
 		int year = Integer.parseInt(str.substring(0, 2)) + 2000;
 		int month = Integer.parseInt(str.substring(2, 4)) - 1;
 		int day = Integer.parseInt(str.substring(4, 6));
@@ -41,7 +41,7 @@ public class SluggyFreelance extends DailyComic {
 	public String getUrlFromTime(Calendar cal) {
 
 		String url = String.format(
-				"http://www.sluggy.com/comics/archives/daily/%d%02d%02d",
+				"https://www.sluggy.com/comics/archives/daily/%d%02d%02d",
 				getYear(cal), cal.get(Calendar.MONTH) + 1,
 				cal.get(Calendar.DAY_OF_MONTH));
 		
