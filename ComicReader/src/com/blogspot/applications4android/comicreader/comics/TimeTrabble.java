@@ -12,7 +12,7 @@ public class TimeTrabble extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://timetrabble.com/";
+		return "https://timetrabble.com/";
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class TimeTrabble extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://timetrabble.com/?page_id=53";
+		return "https://timetrabble.com/?page_id=53";
 	}
 
 	@Override
