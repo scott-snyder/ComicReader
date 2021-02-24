@@ -13,7 +13,7 @@ public class StickyComics extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.stickycomics.com/";
+		return "https://www.stickycomics.com/";
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class StickyComics extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.stickycomics.com/all/comics/";
+		return "https://www.stickycomics.com/all/comics/";
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class StickyComics extends ArchivedComic {
 				final_title = str;
 			}
 		}
-		final_str = final_str.replaceAll(".*src=\"http://www.stickycomics","http://www.stickycomics");
+		final_str = final_str.replaceAll(".*src=\"https://www.stickycomics","https://www.stickycomics");
 		final_str = final_str.replaceAll("\".*","");
 		final_itext = final_itext.replaceAll(".*title=\"","");
 		final_itext = final_itext.replaceAll("\" .*","");
