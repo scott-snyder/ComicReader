@@ -1,5 +1,5 @@
 Bottom: f1699cd6f545f864746208557397b3df85e0d888
-Top:    f1699cd6f545f864746208557397b3df85e0d888
+Top:    9190f9aea1080c74bf149ac107d4e4047134be7f
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:38:58 -0500
 
@@ -8,4 +8,5 @@ vgcats wip
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/VGCats.java  | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
