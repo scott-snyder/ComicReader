@@ -1,5 +1,5 @@
 Bottom: 2432f5b5c088678208a899f84924d7e14980f627
-Top:    2432f5b5c088678208a899f84924d7e14980f627
+Top:    191d1d7dd13d1fc08a040f6917b2ec2f790a3290
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:30:37 -0500
 
@@ -10,4 +10,5 @@ http -> https
 
 ---
 
-
+.../com/blogspot/applications4android/comicreader/comics/Xkcd.java  | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)

@@ -1,6 +1,6 @@
 Version: 1
-Previous: 1e717f17a230d7b69698ced795c2513169ed4f05
-Head: c22b6ec9a9decf051ed1a190257db0dfe4016b69
+Previous: bf06dc180759a4c3be25551d70d64f460b7b0f8d
+Head: 9ee38da0536e75cdecbdb38283175c7af9fcbd73
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -39,7 +39,6 @@ Applied:
   megatokyo: 98a317d098fe134ffce64fce53e353dd0e711647
   questionable: 461963ff181d6f54f6c586cb1a0bbbd48907063d
   timetrabble: d533ebad9ad142527fa57c7dfdba29ed69be5faf
-  xkcd: ace3d9ffb947720336009165eb5930432bdbd27d
-  refresh-temp: c22b6ec9a9decf051ed1a190257db0dfe4016b69
+  xkcd: 9ee38da0536e75cdecbdb38283175c7af9fcbd73
 Unapplied:
 Hidden:
