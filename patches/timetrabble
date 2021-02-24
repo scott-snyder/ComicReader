@@ -1,5 +1,5 @@
 Bottom: 12048501a3a94849063a82e43f551c057ac53a5a
-Top:    12048501a3a94849063a82e43f551c057ac53a5a
+Top:    2432f5b5c088678208a899f84924d7e14980f627
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:29:21 -0500
 
@@ -10,4 +10,5 @@ http -> https
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/TimeTrabble.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
