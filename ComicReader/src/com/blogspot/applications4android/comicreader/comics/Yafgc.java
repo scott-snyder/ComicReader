@@ -13,12 +13,12 @@ public class Yafgc extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://yafgc.net/";
+		return "https://yafgc.net/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://yafgc.net/";
+		return "https://yafgc.net/";
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class Yafgc extends IndexedComic {
 	public String getStripUrlFromId(int num) {
 // Just tacking the number and a minus sign on the end of the URL seems
 // to be enough for the server to figure out the full name...
-		return "http://yafgc.net/comic/" + num + "-";
+		return "https://yafgc.net/comic/" + num + "-";
 	}
 
 	@Override
