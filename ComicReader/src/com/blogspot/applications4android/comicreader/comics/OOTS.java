@@ -12,12 +12,12 @@ public class OOTS extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.giantitp.com/";
+		return "https://www.giantitp.com/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.giantitp.com";
+		return "https://www.giantitp.com";
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class OOTS extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.giantitp.com/comics/oots" + String.format("%04d", num) + ".html";
+		return "https://www.giantitp.com/comics/oots" + String.format("%04d", num) + ".html";
 	}
 
 	@Override
@@ -73,6 +73,6 @@ public class OOTS extends IndexedComic {
 		strip_t = strip_t.substring(strip_t.length()-9);
 		strip.setTitle("Order of the Stick: #" + strip_t.replaceAll(".html", ""));
     	strip.setText("-NA-");
-		return "http://www.giantitp.com"+final_str;
+		return "https://www.giantitp.com"+final_str;
 	}
 }
