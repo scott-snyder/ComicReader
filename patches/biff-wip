@@ -1,5 +1,5 @@
 Bottom: 1979644772ddb61036da3fa701d8adce9165446e
-Top:    1979644772ddb61036da3fa701d8adce9165446e
+Top:    5c825c30a7414270872d345cc5f4ff173ff5c3fa
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:40:10 -0500
 
@@ -8,4 +8,5 @@ biff-wip
 
 ---
 
-
+.../applications4android/comicreader/comics/TheBookOfBiff.java        | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
