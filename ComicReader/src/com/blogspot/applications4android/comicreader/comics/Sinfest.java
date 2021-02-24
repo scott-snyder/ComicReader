@@ -13,12 +13,12 @@ public class Sinfest extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.sinfest.net/";
+		return "https://www.sinfest.net/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.sinfest.net";
+		return "https://www.sinfest.net";
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class Sinfest extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.sinfest.net/archive_page.php?comicID=" + num;
+		return "https://www.sinfest.net/archive_page.php?comicID=" + num;
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class Sinfest extends IndexedComic {
 		String final_str = null;
 		String final_title = null;
 		while ((str = reader.readLine()) != null) {
-			int index1 = str.indexOf("http://sinfest.net/comikaze/comics/");
+			int index1 = str.indexOf("https://sinfest.net/comikaze/comics/");
 			if (index1 != -1) {
 				final_str = str;
 				final_title = str;
