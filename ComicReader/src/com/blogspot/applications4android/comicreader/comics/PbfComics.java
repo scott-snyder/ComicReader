@@ -14,12 +14,12 @@ public class PbfComics extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.pbfcomics.com";
+		return "https://www.pbfcomics.com";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.pbfcomics.com";
+		return "https://www.pbfcomics.com";
 	}
 
 	@Override
@@ -50,12 +50,12 @@ public class PbfComics extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.pbfcomics.com/" + num;
+		return "https://www.pbfcomics.com/" + num;
 	}
 
 	@Override
 	protected int getIdFromStripUrl(String url) {
-		url = url.replace("http://www.pbfcomics.com/", "");
+		url = url.replace("https://www.pbfcomics.com/", "");
 		return Integer.parseInt(url);
 	}
 
@@ -80,7 +80,7 @@ public class PbfComics extends IndexedComic {
 		final_str = final_str.replaceAll(".*src=\"","");
 		final_str = final_str.replaceAll("\".*","");
 		if(!final_str.contains("pbfcomics.com")) {
-			final_str = "http://www.pbfcomics.com/" + final_str;
+			final_str = "https://www.pbfcomics.com/" + final_str;
     	}
 		final_itext = final_itext.replaceAll(".*alt=\"", "");
 		final_itext = final_itext.replaceAll("\".*", "");
