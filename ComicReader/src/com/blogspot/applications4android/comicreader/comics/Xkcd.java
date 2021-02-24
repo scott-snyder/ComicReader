@@ -12,11 +12,11 @@ public class Xkcd extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.xkcd.com/";
+		return "https://www.xkcd.com/";
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://www.xkcd.com";
+		return "https://www.xkcd.com";
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class Xkcd extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.xkcd.com/" + num;
+		return "https://www.xkcd.com/" + num;
 	}
 
 	@Override
