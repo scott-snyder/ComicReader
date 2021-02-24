@@ -15,7 +15,7 @@ public class SomethingPositive extends YearlyArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.somethingpositive.net/";
+		return "https://www.somethingpositive.net/";
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class SomethingPositive extends YearlyArchivedComic {
 				str_temp = str;
 				str_temp=str_temp.replaceAll(".*href=\"","");
 				str_temp=str_temp.replaceAll("\".*","");
-				str_temp="http://www.somethingpositive.net/"+str_temp;
+				str_temp="https://www.somethingpositive.net/"+str_temp;
 				m_com.add(str_temp);
 			}
 		}
@@ -48,13 +48,13 @@ public class SomethingPositive extends YearlyArchivedComic {
 	protected String getArchiveUrl(int year) {
 		int curr = Calendar.getInstance().get(Calendar.YEAR);
 		if(curr == year) {
-			return "http://www.somethingpositive.net/archive.shtml";
+			return "https://www.somethingpositive.net/archive.shtml";
 		}
 		else if(curr == getFirstYear()) {
-			return "http://www.somethingpositive.net/20012002archive.shtml";
+			return "https://www.somethingpositive.net/20012002archive.shtml";
 		}
 		else {
-			return "http://www.somethingpositive.net/"+year+"archive.shtml";
+			return "https://www.somethingpositive.net/"+year+"archive.shtml";
 		}
 	}
 
@@ -88,7 +88,7 @@ public class SomethingPositive extends YearlyArchivedComic {
 		}
 		final_str = final_str.replaceAll(".*src=\"","");
 		final_str = final_str.replaceAll("\".*","");
-		final_str = "http://www.somethingpositive.net/"+final_str;
+		final_str = "https://www.somethingpositive.net/"+final_str;
 		final_title = final_title.replaceAll(".*src=\"","");
 		final_title = final_title.replaceAll(".*images/","");
 		final_title = final_title.replaceAll("\".*","").replaceAll(".png", "").replaceAll(".gif", "");
