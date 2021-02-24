@@ -1,5 +1,5 @@
 Bottom: 73278d92acf8cd73989f82b7dd2da99672a2a4f6
-Top:    73278d92acf8cd73989f82b7dd2da99672a2a4f6
+Top:    8651eb81446b098abdc4fd340a44a9b39f78dd9d
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:42:21 -0500
 
@@ -8,4 +8,5 @@ sticky wip
 
 ---
 
-
+.../applications4android/comicreader/comics/StickyComics.java       | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
