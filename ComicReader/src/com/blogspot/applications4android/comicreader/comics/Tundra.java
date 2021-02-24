@@ -14,7 +14,7 @@ public class Tundra extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.tundracomics.com/";
+		return "https://www.tundracomics.com/";
 	}
 
 	@Override
@@ -58,14 +58,14 @@ public class Tundra extends ArchivedComic {
 		for (j=0; j<m_com_urls.length; j++) {
 			link_temp = m_com_urls[j].split("-");
 			m_com_urls[j] = link_temp[1]+"-"+link_temp[2]+"-"+link_temp[0];
-			m_com_urls[j] = "http://www.tundracomics.com/thisweekstundra/"+m_com_urls[j]+".jpg";
+			m_com_urls[j] = "https://www.tundracomics.com/thisweekstundra/"+m_com_urls[j]+".jpg";
 		}
 		return m_com_urls;
 	}
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.tundracomics.com/thisweekstundra/";
+		return "https://www.tundracomics.com/thisweekstundra/";
 	}
 
 	@Override
