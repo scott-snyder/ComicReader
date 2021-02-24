@@ -1,6 +1,6 @@
 Version: 1
-Previous: 4182a2758acbabaa4000011d43f296d8ff267bee
-Head: 8324c67023784dc653d5eaf7b0e48717ec8dd8d6
+Previous: 231c16202133ede159a2fbf0413da45bfd218f82
+Head: 0dcc8da5332826113de185560463b07dff76a0a1
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -41,7 +41,6 @@ Applied:
   timetrabble: d533ebad9ad142527fa57c7dfdba29ed69be5faf
   xkcd: 9ee38da0536e75cdecbdb38283175c7af9fcbd73
   irregular: f47883bc49d94538c80982c24929c3dcece07af1
-  yafgc-wip: 13d9d671b9ee7ca6fc6d5a94fc3c1401bb30f5e0
-  refresh-temp: 8324c67023784dc653d5eaf7b0e48717ec8dd8d6
+  yafgc-wip: 0dcc8da5332826113de185560463b07dff76a0a1
 Unapplied:
 Hidden:
