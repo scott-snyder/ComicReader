@@ -16,15 +16,15 @@ import com.blogspot.applications4android.comicreader.exceptions.ComicLatestExcep
  * 
  */
 public class TwoKinds extends IndexedComic {
-	private String prevComic = "http://twokinds.keenspot.com/archive.php";
+	private String prevComic = "https://twokinds.keenspot.com/archive.php";
 	
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://twokinds.keenspot.com/";
+		return "https://twokinds.keenspot.com/";
 	}
 
 	public String getComicWebPageUrl() {
-		return "http://twokinds.keenspot.com/";
+		return "https://twokinds.keenspot.com/";
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class TwoKinds extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://twokinds.keenspot.com/archive.php?p=" + num;
+		return "https://twokinds.keenspot.com/archive.php?p=" + num;
 	}
 
 	@Override
@@ -108,12 +108,12 @@ public class TwoKinds extends IndexedComic {
 		String final_str = null;
 		String final_title = null;
 		while ((str = reader.readLine()) != null) {
-			int index1 = str.indexOf("><img src=\"http://t");
+			int index1 = str.indexOf("><img src=\"https://t");
 			if (index1 != -1) {
 				final_str = str;
 				final_title = str;
 			}
-			int index3 = str.indexOf("x\" src=\"http://c");
+			int index3 = str.indexOf("x\" src=\"https://c");
 			if (index3 != -1) {
 				final_str = str;
 				final_title = "";
