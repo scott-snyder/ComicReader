@@ -1,0 +1,11 @@
+Bottom: b07c54ef611009f063345afa790f431a40426336
+Top:    97bc88af16305034c1a88a47642253debadfe523
+Author: scott snyder <sss@karma>
+Date:   2021-02-23 21:41:08 -0500
+
+Refresh of sluggy-wip
+
+---
+
+.../applications4android/comicreader/comics/SluggyFreelance.java    | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
