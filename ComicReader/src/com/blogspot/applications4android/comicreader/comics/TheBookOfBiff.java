@@ -12,7 +12,7 @@ public class TheBookOfBiff extends ArchivedComic {
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.thebookofbiff.com/";
+		return "https://www.thebookofbiff.com/";
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class TheBookOfBiff extends ArchivedComic {
 
 	@Override
 	protected String getArchiveUrl() {
-		return "http://www.thebookofbiff.com/archive/";
+		return "https://www.thebookofbiff.com/archive/";
 	}
 
 	@Override
