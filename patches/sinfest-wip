@@ -1,5 +1,5 @@
 Bottom: 14064ec95fd44cf7b97b2d0554fb188eb7c53da8
-Top:    14064ec95fd44cf7b97b2d0554fb188eb7c53da8
+Top:    1979644772ddb61036da3fa701d8adce9165446e
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:39:48 -0500
 
@@ -8,4 +8,5 @@ sinfest wip
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/Sinfest.java | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
