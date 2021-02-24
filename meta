@@ -1,6 +1,6 @@
 Version: 1
-Previous: 0e58aea497594cce8aa63059b5c2570db30a781b
-Head: 446fb11dad45bfc57c185a616b31feff1224ac95
+Previous: ff15a62e6bdc42d4c20aa66966a4e6b08e2a1c4b
+Head: 98c242fcee0e1b3135e9520f92e8c7764e98294d
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -48,7 +48,6 @@ Applied:
   biff-wip: 3f8a1b321693e368b18dc4d52e0588a399683576
   extraordinary-wip: 234f7436c94f6eb68966f174386439ed5dc24bd1
   sluggy-wip: c297a13e006c3e73cc34d5e03f37e48b9a875fab
-  twokinds-wip: 84ba74b15f4258643e81ddbcfa7968c434db0f42
-  refresh-temp: 446fb11dad45bfc57c185a616b31feff1224ac95
+  twokinds-wip: 98c242fcee0e1b3135e9520f92e8c7764e98294d
 Unapplied:
 Hidden:
