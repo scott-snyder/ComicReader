@@ -13,12 +13,12 @@ public class ExtraOrdinary extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.exocomics.com";
+		return "https://www.exocomics.com";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.exocomics.com";
+		return "https://www.exocomics.com";
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class ExtraOrdinary extends IndexedComic {
 			ComicLatestException e = new ComicLatestException(msg);
 			throw e;
 		}
-		final_str = final_str.replaceAll(".*content=\"http://www.exocomics.com/","");
+		final_str = final_str.replaceAll(".*content=\"https://www.exocomics.com/","");
 		final_str = final_str.replaceAll("\".*","");
 //Log.d("ExtraOrdinary", "final_string " + final_str);
 	   	return Integer.parseInt(final_str);
@@ -47,9 +47,9 @@ public class ExtraOrdinary extends IndexedComic {
 	public String getStripUrlFromId(int num) {
 		String str_url;
 		if ( num<10 ) {
-		   str_url="http://www.exocomics.com/0" + num;
+		   str_url="https://www.exocomics.com/0" + num;
 		} else {
-		   str_url="http://www.exocomics.com/" + num;
+		   str_url="https://www.exocomics.com/" + num;
 		}
 		return str_url;
 	}
