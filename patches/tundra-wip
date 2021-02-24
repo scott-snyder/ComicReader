@@ -1,5 +1,5 @@
 Bottom: 174b9959a96897da80fa77465e4928a01c222bba
-Top:    174b9959a96897da80fa77465e4928a01c222bba
+Top:    73278d92acf8cd73989f82b7dd2da99672a2a4f6
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:42:03 -0500
 
@@ -8,4 +8,5 @@ tundra-wip
 
 ---
 
-
+.../blogspot/applications4android/comicreader/comics/Tundra.java    | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
