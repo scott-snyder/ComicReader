@@ -12,12 +12,12 @@ public class VGCats extends IndexedComic {
 	
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://www.vgcats.com/comics/?";
+		return "https://www.vgcats.com/comics/?";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://www.vgcats.com/comics/?";
+		return "https://www.vgcats.com/comics/?";
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class VGCats extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://www.vgcats.com/comics/?strip_id=" + num;
+		return "https://www.vgcats.com/comics/?strip_id=" + num;
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class VGCats extends IndexedComic {
 		}
 		final_str = final_str.replaceAll(".*src=\"","");
 		final_str = final_str.replaceAll("\".*","");
-		final_str = "http://www.vgcats.com/comics/"+final_str;
+		final_str = "https://www.vgcats.com/comics/"+final_str;
     	final_title = final_title.replaceAll(".*images/","");
     	final_title = final_title.replaceAll(".jpg.*","");
     	final_title = final_title.replaceAll(".gif.*","");
