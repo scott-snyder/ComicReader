@@ -14,12 +14,12 @@ public class IrregularWebComic extends IndexedComic {
 
 	@Override
 	protected String getFrontPageUrl() {
-		return "http://irregularwebcomic.net/";
+		return "https://irregularwebcomic.net/";
 	}
 
 	@Override
 	public String getComicWebPageUrl() {
-		return "http://irregularwebcomic.net/";
+		return "https://irregularwebcomic.net/";
 	}
 
 	@Override
@@ -44,12 +44,12 @@ public class IrregularWebComic extends IndexedComic {
 
 	@Override
 	public String getStripUrlFromId(int num) {
-		return "http://irregularwebcomic.net/" + num + ".html";
+		return "https://irregularwebcomic.net/" + num + ".html";
 	}
 
 	@Override
 	protected int getIdFromStripUrl(String url) {
-		url = url.replace("http://irregularwebcomic.net/", "");
+		url = url.replace("https://irregularwebcomic.net/", "");
 		url = url.replace(".html", "");
 		return Integer.parseInt(url);
 	}
@@ -72,7 +72,7 @@ public class IrregularWebComic extends IndexedComic {
 		} else {
 			a = ""+id;	
 		}
-		String final_str = "http://irregularwebcomic.net/comics/irreg" + a + ".jpg";
+		String final_str = "https://irregularwebcomic.net/comics/irreg" + a + ".jpg";
 		strip.setTitle("IrregularWebComic: " + id);
 		strip.setText("-NA-");
 		return final_str;
