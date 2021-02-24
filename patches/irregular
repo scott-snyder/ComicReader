@@ -1,5 +1,5 @@
 Bottom: 191d1d7dd13d1fc08a040f6917b2ec2f790a3290
-Top:    191d1d7dd13d1fc08a040f6917b2ec2f790a3290
+Top:    aec5f5284dcf1367b5da79b7b7fbc6b4be1d6277
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:31:07 -0500
 
@@ -10,4 +10,5 @@ http -> https
 
 ---
 
-
+.../comicreader/comics/IrregularWebComic.java                  | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
