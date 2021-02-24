@@ -1,0 +1,11 @@
+Bottom: fb87ebb6fdc83e3a2876ed22ed81cf6c0548f160
+Top:    98e5363f6c1dfeaa7901de3d9573a7df0130c03e
+Author: scott snyder <sss@karma>
+Date:   2021-02-23 23:03:04 -0500
+
+Refresh of gonew4
+
+---
+
+ComicReader/assets/classes.json | 7 +++++++
+ 1 file changed, 7 insertions(+)
