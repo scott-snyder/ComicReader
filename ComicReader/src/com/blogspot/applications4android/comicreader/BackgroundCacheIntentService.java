@@ -196,6 +196,9 @@ public class BackgroundCacheIntentService extends FullyAwakeIntentService {
 				com.writeProperties();
 				Log.d(TAG, "Finished working on comic = " + clz.mName + " status=" + status);
 				Log.d(TAG, "Number of downloads so far=" + mNumDnlds);
+                                // Throttle cache requests.  Otherwise, some
+                                // servers can start blocking us.
+                                Thread.sleep (10000);
 			}
 		}
 		catch (Exception e) {
