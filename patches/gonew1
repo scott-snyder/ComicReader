@@ -1,5 +1,5 @@
-Bottom: 1d7e918aeb35917e055f16ffb0c7cb999f12a4a8
-Top:    2835b797d5293ac368d5197f29749c487c23df47
+Bottom: 73e9d1737d59e8cf6f1f65910d17ff1850e85991
+Top:    b4f9fe3eaba845f4c86ac9226c6e3454fbfd8ed1
 Author: scott snyder <sss@karma>
 Date:   2020-06-10 00:06:05 -0400
 
@@ -15,29 +15,3 @@ angry-birds
 ask-a-cat
 ask-a-portly-syndicate-person
 aunty-acid
-
-
----
-
-ComicReader/assets/classes.json                             | 10 ++++++++++
- .../comicreader/comics/GoComics/AJAndMagnus.java            | 13 +++++++++++++
- .../comicreader/comics/GoComics/AdultChildren.java          | 13 +++++++++++++
- .../comicreader/comics/GoComics/AlisHouse.java              | 13 +++++++++++++
- .../comicreader/comics/GoComics/AmandaTheGreat.java         | 13 +++++++++++++
- .../comicreader/comics/GoComics/AmericanChopSuey.java       | 13 +++++++++++++
- .../comicreader/comics/GoComics/AngryBirds.java             | 13 +++++++++++++
- .../comicreader/comics/GoComics/AskACat.java                | 13 +++++++++++++
- .../comics/GoComics/AskAPortlySyndicatePerson.java          | 13 +++++++++++++
- .../comicreader/comics/GoComics/AuntyAcid.java              | 13 +++++++++++++
- .../comics/GoComics/TheAdventuresOfBusinessCat.java         | 13 +++++++++++++
- 11 files changed, 140 insertions(+)
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AJAndMagnus.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AdultChildren.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AlisHouse.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AmandaTheGreat.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AmericanChopSuey.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AngryBirds.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AskACat.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AskAPortlySyndicatePerson.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/AuntyAcid.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/TheAdventuresOfBusinessCat.java

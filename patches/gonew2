@@ -1,5 +1,5 @@
-Bottom: 2835b797d5293ac368d5197f29749c487c23df47
-Top:    4f97997751db0e156cf14a9bf0f3b7d756b289b5
+Bottom: b4f9fe3eaba845f4c86ac9226c6e3454fbfd8ed1
+Top:    aa5407256249047639306095aa4fbdaf3d00f302
 Author: scott snyder <sss@karma>
 Date:   2020-08-22 22:34:34 -0400
 
@@ -16,29 +16,3 @@ the-bent-pinky
 berkeley-mews
 the-best-medicine
 
-
-
----
-
-ComicReader/assets/classes.json                             | 10 ++++++++++
- .../comicreader/comics/GoComics/BackToBC.java               | 13 +++++++++++++
- .../comicreader/comics/GoComics/Bacon.java                  | 13 +++++++++++++
- .../comicreader/comics/GoComics/BadMachinery.java           | 13 +++++++++++++
- .../comicreader/comics/GoComics/BatchRejection.java         | 13 +++++++++++++
- .../comicreader/comics/GoComics/BeanieTheBrownie.java       | 13 +++++++++++++
- .../comicreader/comics/GoComics/BearWithMe.java             | 13 +++++++++++++
- .../comicreader/comics/GoComics/BerkeleyMews.java           | 13 +++++++++++++
- .../comicreader/comics/GoComics/TheAwkwardYeti.java         | 13 +++++++++++++
- .../comicreader/comics/GoComics/TheBentPinky.java           | 13 +++++++++++++
- .../comicreader/comics/GoComics/TheBestMedicine.java        | 13 +++++++++++++
- 11 files changed, 140 insertions(+)
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BackToBC.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/Bacon.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BadMachinery.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BatchRejection.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BeanieTheBrownie.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BearWithMe.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/BerkeleyMews.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/TheAwkwardYeti.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/TheBentPinky.java
- create mode 100755 ComicReader/src/com/blogspot/applications4android/comicreader/comics/GoComics/TheBestMedicine.java
