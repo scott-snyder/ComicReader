@@ -1,6 +1,6 @@
 Version: 1
-Previous: 960deacc0581b65d73733c04a6a55ee610b9f769
-Head: a5b51630166a662ca96502a4d17be2bfee7bc32d
+Previous: 880ccd3673d8e36a6a721b2e8fa62d0a1c5823cb
+Head: 859aa4112ced6ee96effa7a3da5e10cd8b8597f0
 Applied:
   target: 84b05bfed2fce804b54cc8b5572e4647840fb66d
   panties: f588e01c63864963a81ae92412240c08f1ca3ad5
@@ -50,11 +50,6 @@ Applied:
   tundra-wip: 515825cad750b522c69b3e0f7b4e8f5253b8b7d3
   sticky-wip: 86d3e8c52e3a99608d74762b676ae63f14dd8840
   throttle: 2950f99351b8aea2b8885b266c955519e537875a
-  godel: 2282515ffb3a2ba03332ea7c5df7484401ce6e08
-  gonew1: f714e559c07c761ae23d301aa2a90b0fcdbaefa9
-  gonew2: fb16df634d3cf7a3e5716f2e5e3bdb5297257469
-  gonew3: e660fdee74e9ab64bfbf5a16a5c55cfb24a73847
-  gonew4: 98cda3fabf046fc56507577bd84e5003a5c0f36d
-  gocomics-update: a5b51630166a662ca96502a4d17be2bfee7bc32d
+  update-gocomics-list: 859aa4112ced6ee96effa7a3da5e10cd8b8597f0
 Unapplied:
 Hidden:
