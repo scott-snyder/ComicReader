@@ -36,8 +36,8 @@ sub cleanupPrefName {
 }
 
 my $isEditorial = ((scalar(@ARGV) == 1) && ($ARGV[0] eq '-editorial'));
-my $url = "http://www.gocomics.com";
-my $mainurl = $isEditorial? "http://www.gocomics.com/explore/editorial_list" : "http://www.gocomics.com/features";
+my $url = "https://www.gocomics.com";
+my $mainurl = $isEditorial? "https://www.gocomics.com/explore/editorial_list" : "https://www.gocomics.com/features";
 my $mainpage = "gocomics.mainpage";
 my $allcomics = $isEditorial? "all_gocomics_editorial.txt" : "all_gocomics.txt";
 my @comicslist;
