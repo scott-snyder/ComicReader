@@ -1,12 +1,6 @@
-Bottom: c14cb380ea90f5a0403c21aaab9167da6f77553c
-Top:    9c27cfabd0ecfdd4b418bc2024fdb2b57e674769
+Bottom: e952d8e568edd29cee2fb821d8bc92bf00f985c5
+Top:    13804a82697449b8a6fe5746d75cbbe568e7e579
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 22:11:39 -0500
 
 looking for group wip
-
-
----
-
-.../applications4android/comicreader/comics/LookingForGroup.java    | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)

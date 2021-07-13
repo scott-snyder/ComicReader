@@ -1,14 +1,8 @@
-Bottom: c11d8a7e215aab777f6ffe1e2f62d93768a4bcde
-Top:    b5bab7c3256a0751152329b6dadfa3d71dd85771
+Bottom: 394718150d181d061d3fbc8e679a86bb82b822e6
+Top:    0b1636a9cba8ad943380bb70fb76b775ac687af6
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:57:20 -0500
 
 Fix General Protection Fault
 
 http -> https
-
-
----
-
-.../comicreader/comics/GeneralProtectionFault.java                  | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)

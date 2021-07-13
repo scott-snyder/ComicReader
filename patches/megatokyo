@@ -1,14 +1,8 @@
-Bottom: 9c27cfabd0ecfdd4b418bc2024fdb2b57e674769
-Top:    df8a885914b04a29269fa65fb7fb7679fe2dc01f
+Bottom: 13804a82697449b8a6fe5746d75cbbe568e7e579
+Top:    d959b76a080a17b398bc5c47b03b9f2b88eba432
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 22:18:45 -0500
 
 Fix MegaTokyo
 
 http -> https
-
-
----
-
-.../blogspot/applications4android/comicreader/comics/MegaTokyo.java | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)

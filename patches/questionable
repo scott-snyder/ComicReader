@@ -1,14 +1,8 @@
-Bottom: df8a885914b04a29269fa65fb7fb7679fe2dc01f
-Top:    12048501a3a94849063a82e43f551c057ac53a5a
+Bottom: d959b76a080a17b398bc5c47b03b9f2b88eba432
+Top:    cf91d50de43e466c01a11955a2d8e71005cf10ce
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:28:52 -0500
 
 Fix Questionable Content.
 
 http -> https
-
-
----
-
-.../comicreader/comics/QuestionableContent.java                   | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)

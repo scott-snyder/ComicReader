@@ -1,12 +1,6 @@
-Bottom: 632a18092efa98fce241cf706447a99060900350
-Top:    fbf80105bf0ac21c368e20f302fbc129a96b8d0d
+Bottom: efeba31b91e7e0738983b58c1eb125f7a11d0f22
+Top:    0563944b46c90712d01e1d8e9f15cd76f86bc4e4
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:45:34 -0500
 
 edmund finney wip
-
-
----
-
-.../applications4android/comicreader/comics/EdmundFinney.java     | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)

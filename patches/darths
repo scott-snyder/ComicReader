@@ -1,14 +1,8 @@
-Bottom: 2108917c0cc5102175d862f2cae81052959c6f4b
-Top:    3fb05dc35cf0f9f86006aac8e7dddacfaf29cc84
+Bottom: 5dff67bdc1b470207bd65fe62ab95d6e4dacb51b
+Top:    08668fb9ede8acf2ed387771239a990ae9081e84
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:29:28 -0500
 
 Fix Darths & Droids
 
 http -> https
-
-
----
-
-.../applications4android/comicreader/comics/DarthsandDroids.java  | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)

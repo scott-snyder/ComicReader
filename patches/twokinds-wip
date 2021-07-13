@@ -1,12 +1,6 @@
-Bottom: 97bc88af16305034c1a88a47642253debadfe523
-Top:    23c3b2e55412341f71f2231b349191f9525cb735
+Bottom: 91f6fddbb527f6a7e5c1a92758b19b1593660e80
+Top:    e0437d9aa3332fe165eaa1bd6e366987b5a30aa4
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:41:16 -0500
 
 twokinds wip
-
-
----
-
-.../applications4android/comicreader/comics/TwoKinds.java    | 12 ++++++------
- 1 file changed, 6 insertions(+), 6 deletions(-)

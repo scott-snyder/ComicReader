@@ -1,12 +1,6 @@
-Bottom: 5c825c30a7414270872d345cc5f4ff173ff5c3fa
-Top:    b07c54ef611009f063345afa790f431a40426336
+Bottom: 4cbc370b039c112363abae916a309664e63237b9
+Top:    141e2cd3055015968b71caba0aaa8224dafd558a
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:40:34 -0500
 
 extraordinary-wip
-
-
----
-
-.../applications4android/comicreader/comics/ExtraOrdinary.java | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)

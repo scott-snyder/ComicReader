@@ -1,12 +1,6 @@
-Bottom: 3f963e27f4696ca2b1e771e812851a097353c7a3
-Top:    45e481b55a1eebc52189dfd5b7e92f2a30ee80b6
+Bottom: 0333a7be95bed1cbb1da56e4e151c37358210a5b
+Top:    1ca3229ba49d8165bfa9b8f3a82267b9e131ae11
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:37:44 -0500
 
 dinosaur wip
-
-
----
-
-.../blogspot/applications4android/comicreader/comics/Dinosaur.java  | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)

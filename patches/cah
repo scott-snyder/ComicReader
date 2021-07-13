@@ -1,5 +1,5 @@
-Bottom: e8987950afec2000c714d89e5be8afdd4e679647
-Top:    82dcc6af1fd62a602e9219acf267233144065d06
+Bottom: 350782d4ac75ce8684020be41585faf717d67874
+Top:    7e5269dd00133f92ffd9d7eb4b39b141b1d2a433
 Author: scott snyder <sss@karma>
 Date:   2020-06-01 00:12:07 -0400
 
@@ -8,9 +8,3 @@ Fixes for Cyanide & Happiness
 Fix for spaces in url (such as in 5572).
 
 Use https instead of http.
-
-
----
-
-.../applications4android/comicreader/comics/Cyanide.java      | 11 ++++++-----
- 1 file changed, 6 insertions(+), 5 deletions(-)

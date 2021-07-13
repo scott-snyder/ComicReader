@@ -1,12 +1,6 @@
-Bottom: 82dcc6af1fd62a602e9219acf267233144065d06
-Top:    1d7e918aeb35917e055f16ffb0c7cb999f12a4a8
+Bottom: 7e5269dd00133f92ffd9d7eb4b39b141b1d2a433
+Top:    aae8ed43e3b0002a6c95c0483ccd9a0d044ca71d
 Author: scott snyder <sss@karma>
 Date:   2020-06-01 00:15:19 -0400
 
 Addition to gitignore.
-
-
----
-
-.gitignore | 1 +
- 1 file changed, 1 insertion(+)

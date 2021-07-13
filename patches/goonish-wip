@@ -1,12 +1,6 @@
-Bottom: f414db5e1235a2e0b5fb385c6332d37709630761
-Top:    c11d8a7e215aab777f6ffe1e2f62d93768a4bcde
+Bottom: 0d99112ae42ea1cd5897bdff610c7194e0b7d4bb
+Top:    394718150d181d061d3fbc8e679a86bb82b822e6
 Author: scott snyder <sss@karma>
 Date:   2021-02-21 18:53:06 -0500
 
 goonish wip
-
-
----
-
-.../applications4android/comicreader/comics/ElGoonishShive.java   | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)

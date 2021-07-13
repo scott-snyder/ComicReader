@@ -1,12 +1,6 @@
-Bottom: b07c54ef611009f063345afa790f431a40426336
-Top:    97bc88af16305034c1a88a47642253debadfe523
+Bottom: 141e2cd3055015968b71caba0aaa8224dafd558a
+Top:    91f6fddbb527f6a7e5c1a92758b19b1593660e80
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:40:56 -0500
 
 sluggy freelance wip
-
-
----
-
-.../applications4android/comicreader/comics/SluggyFreelance.java    | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)

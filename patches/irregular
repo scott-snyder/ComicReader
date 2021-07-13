@@ -1,14 +1,8 @@
-Bottom: 191d1d7dd13d1fc08a040f6917b2ec2f790a3290
-Top:    aec5f5284dcf1367b5da79b7b7fbc6b4be1d6277
+Bottom: 5c6b4865f4d958c3580b6081858a098062d689d1
+Top:    7e4467457c813188a24fe9b5d6810775bf22c89e
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:31:07 -0500
 
 Fix Irregular Web Comic
 
 http -> https
-
-
----
-
-.../comicreader/comics/IrregularWebComic.java                  | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)

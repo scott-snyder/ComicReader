@@ -1,12 +1,6 @@
-Bottom: 9190f9aea1080c74bf149ac107d4e4047134be7f
-Top:    14064ec95fd44cf7b97b2d0554fb188eb7c53da8
+Bottom: efe52eed1c938bfc3469751aed401dc10a677bd0
+Top:    82c8e192454273965b6ecbf8fe6d90c94955717e
 Author: scott snyder <sss@karma>
 Date:   2021-02-23 21:39:29 -0500
 
 oots wip
-
-
----
-
-.../blogspot/applications4android/comicreader/comics/OOTS.java    | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
